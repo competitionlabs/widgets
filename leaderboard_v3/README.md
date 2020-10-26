@@ -120,6 +120,30 @@ Build dark theme:
 ```shell script
 npm run dev:dark-theme
 ```
+Build blue theme:
+```shell script
+npm run dev:blue-theme
+```
+Build green theme:
+```shell script
+npm run dev:green-theme
+```
+Build grey theme:
+```shell script
+npm run dev:grey-theme
+```
+Build red theme:
+```shell script
+npm run dev:red-theme
+```
+Build orange theme:
+```shell script
+npm run dev:orange-theme
+```
+Build black theme:
+```shell script
+npm run dev:black-theme
+```
 
 ## Examples
 * [Live Default Theme laoding examples](https://s3-eu-west-1.amazonaws.com/demo.competitionlabs.com/_widgets/examples/leaderboard_v3-default-theme.html)
