@@ -107,7 +107,7 @@ export const LbWidget = function (options) {
       loadLeaderboardHistory: {},
       layoutSettings: {
         tournamentList: true,
-        imageBanner: false,
+        imageBanner: true,
         title: true,
         titleLinkToDetailsPage: true // if set to false will make the description available under title
       }
