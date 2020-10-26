@@ -289,6 +289,7 @@ export const MainWidget = function (options) {
     var sectionLBDetails = document.createElement('div');
     var sectionLBDetailsInfo = document.createElement('div');
     var sectionLBDetailsInfoIcon = document.createElement('div');
+    var sectionLBDetailsImageContainer = document.createElement('div');
     var sectionLBDetailsContentContainer = document.createElement('div');
     var sectionLBDetailsContentContainerLabel = document.createElement('div');
     var sectionLBDetailsContentContainerDate = document.createElement('div');
@@ -324,7 +325,7 @@ export const MainWidget = function (options) {
     var sectionTournamentListBodyResults = document.createElement('div');
     var sectionTournamentBackAction = document.createElement('a');
 
-    sectionLB.setAttribute('class', _this.settings.lbWidget.settings.navigation.tournaments.containerClass + ' cl-main-section-item cl-main-active-section');
+    sectionLB.setAttribute('class', _this.settings.lbWidget.settings.navigation.tournaments.containerClass + ' cl-main-section-item cl-main-active-section' + (_this.settings.lbWidget.settings.leaderboard.layoutSettings.imageBanner ? ' cl-main-section-image-banner-active' : ''));
     sectionLBHeader.setAttribute('class', 'cl-main-widget-lb-header');
     sectionLBHeaderList.setAttribute('class', 'cl-main-widget-lb-header-list');
     sectionLBHeaderListIcon.setAttribute('class', 'cl-main-widget-lb-header-list-icon');
@@ -335,6 +336,7 @@ export const MainWidget = function (options) {
     sectionLBDetails.setAttribute('class', 'cl-main-widget-lb-details');
     sectionLBDetailsInfo.setAttribute('class', 'cl-main-widget-lb-details-info');
     sectionLBDetailsInfoIcon.setAttribute('class', 'cl-main-widget-lb-details-info-icon');
+    sectionLBDetailsImageContainer.setAttribute('class', 'cl-main-widget-lb-details-image-container');
     sectionLBDetailsContentContainer.setAttribute('class', 'cl-main-widget-lb-details-content');
     sectionLBDetailsContentContainerLabel.setAttribute('class', 'cl-main-widget-lb-details-content-label');
     sectionLBDetailsContentContainerDate.setAttribute('class', 'cl-main-widget-lb-details-content-date');
@@ -390,6 +392,11 @@ export const MainWidget = function (options) {
     sectionLBDetailsContentContainer.appendChild(sectionLBDetailsContentContainerLabel);
     sectionLBDetailsContentContainer.appendChild(sectionLBDetailsContentContainerDate);
     sectionLBDetails.appendChild(sectionLBDetailsInfo);
+
+    if (_this.settings.lbWidget.settings.leaderboard.layoutSettings.imageBanner) {
+      sectionLBDetails.appendChild(sectionLBDetailsImageContainer);
+    }
+
     sectionLBDetails.appendChild(sectionLBDetailsContentContainer);
 
     sectionLBLeaderboardHeader.appendChild(sectionLBLeaderboardHeaderLabels);
@@ -1116,6 +1123,26 @@ export const MainWidget = function (options) {
   this.leaderboardDetailsUpdate = function () {
     var _this = this;
     var mainLabel = query(_this.settings.section, '.cl-main-widget-lb-details-content-label');
+
+    if (_this.settings.lbWidget.settings.leaderboard.layoutSettings.imageBanner) {
+      var image = query(_this.settings.section, '.cl-main-widget-lb-details-image-container');
+      var body = document.createElement('div');
+      image.innerHTML = '';
+
+      body.innerHTML = (_this.settings.lbWidget.settings.competition.activeContest.description.length > 0) ? _this.settings.lbWidget.settings.competition.activeContest.description : _this.settings.lbWidget.settings.competition.activeCompetition.description;
+
+      if (_this.settings.lbWidget.settings.competition.extractImageHeader) {
+        objectIterator(query(body, 'img'), function (img, key, count) {
+          if (count === 0) {
+            var newImg = img.cloneNode(true);
+            addClass(newImg, 'cl-main-widget-lb-details-image');
+            image.appendChild(newImg);
+
+            remove(img);
+          }
+        });
+      }
+    }
 
     mainLabel.innerHTML = (_this.settings.lbWidget.settings.competition.activeContest !== null) ? _this.settings.lbWidget.settings.competition.activeContest.label : _this.settings.lbWidget.settings.translation.tournaments.noAvailableCompetitions;
   };
