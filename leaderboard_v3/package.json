@@ -1,6 +1,6 @@
 {
   "name": "@competitionlabs/leaderboard",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Leaderboard Widgets",
   "scripts": {
     "dev": "cross-env --env.LANG=en --env.production=dev --env.THEME=default-theme webpack-dev-server --config ./webpack/webpack.config.js --progress",
