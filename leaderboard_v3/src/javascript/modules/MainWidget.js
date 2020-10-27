@@ -293,6 +293,9 @@ export const MainWidget = function (options) {
     var sectionLBDetailsContentContainer = document.createElement('div');
     var sectionLBDetailsContentContainerLabel = document.createElement('div');
     var sectionLBDetailsContentContainerDate = document.createElement('div');
+    var sectionLBDetailsDescriptionContainer = document.createElement('div');
+    var sectionLBDetailsDescription = document.createElement('div');
+    var sectionLBDetailsDescriptionClose = document.createElement('span');
 
     var sectionLBLeaderboard = document.createElement('div');
     var sectionLBLeaderboardHeader = document.createElement('div');
@@ -340,6 +343,9 @@ export const MainWidget = function (options) {
     sectionLBDetailsContentContainer.setAttribute('class', 'cl-main-widget-lb-details-content');
     sectionLBDetailsContentContainerLabel.setAttribute('class', 'cl-main-widget-lb-details-content-label');
     sectionLBDetailsContentContainerDate.setAttribute('class', 'cl-main-widget-lb-details-content-date');
+    sectionLBDetailsDescriptionContainer.setAttribute('class', 'cl-main-widget-lb-details-description-container');
+    sectionLBDetailsDescription.setAttribute('class', 'cl-main-widget-lb-details-description');
+    sectionLBDetailsDescriptionClose.setAttribute('class', 'cl-main-widget-lb-details-description-close');
 
     // Leaderboard result container
     sectionLBLeaderboard.setAttribute('class', 'cl-main-widget-lb-leaderboard');
@@ -398,6 +404,12 @@ export const MainWidget = function (options) {
     }
 
     sectionLBDetails.appendChild(sectionLBDetailsContentContainer);
+
+    if (!_this.settings.lbWidget.settings.leaderboard.layoutSettings.titleLinkToDetailsPage) {
+      sectionLBDetailsDescriptionContainer.appendChild(sectionLBDetailsDescription);
+      sectionLBDetailsDescriptionContainer.appendChild(sectionLBDetailsDescriptionClose);
+      sectionLBDetails.appendChild(sectionLBDetailsDescriptionContainer);
+    }
 
     sectionLBLeaderboardHeader.appendChild(sectionLBLeaderboardHeaderLabels);
     sectionLBLeaderboard.appendChild(sectionLBLeaderboardHeader);
@@ -1120,16 +1132,28 @@ export const MainWidget = function (options) {
     }, 1000);
   };
 
+  this.getActiveCompetitionDescription = function () {
+    return (this.settings.lbWidget.settings.competition.activeContest.description.length > 0) ? this.settings.lbWidget.settings.competition.activeContest.description : this.settings.lbWidget.settings.competition.activeCompetition.description;
+  };
+
   this.leaderboardDetailsUpdate = function () {
     var _this = this;
     var mainLabel = query(_this.settings.section, '.cl-main-widget-lb-details-content-label');
+    var body = null;
+
+    if (!_this.settings.lbWidget.settings.leaderboard.layoutSettings.titleLinkToDetailsPage) {
+      body = query(_this.settings.section, '.cl-main-widget-lb-details-description');
+      body.innerHTML = _this.getActiveCompetitionDescription();
+    }
 
     if (_this.settings.lbWidget.settings.leaderboard.layoutSettings.imageBanner) {
       var image = query(_this.settings.section, '.cl-main-widget-lb-details-image-container');
-      var body = document.createElement('div');
       image.innerHTML = '';
 
-      body.innerHTML = (_this.settings.lbWidget.settings.competition.activeContest.description.length > 0) ? _this.settings.lbWidget.settings.competition.activeContest.description : _this.settings.lbWidget.settings.competition.activeCompetition.description;
+      if (body === null) {
+        body = document.createElement('div');
+        body.innerHTML = _this.getActiveCompetitionDescription();
+      }
 
       if (_this.settings.lbWidget.settings.competition.extractImageHeader) {
         objectIterator(query(body, 'img'), function (img, key, count) {
@@ -1145,6 +1169,16 @@ export const MainWidget = function (options) {
     }
 
     mainLabel.innerHTML = (_this.settings.lbWidget.settings.competition.activeContest !== null) ? _this.settings.lbWidget.settings.competition.activeContest.label : _this.settings.lbWidget.settings.translation.tournaments.noAvailableCompetitions;
+  };
+
+  this.showEmbeddedCompetitionDetailsContent = function (callback) {
+    addClass(this.settings.section, 'cl-main-active-embedded-description');
+    if (typeof callback === 'function') callback();
+  };
+
+  this.hideEmbeddedCompetitionDetailsContent = function (callback) {
+    removeClass(this.settings.section, 'cl-main-active-embedded-description');
+    if (typeof callback === 'function') callback();
   };
 
   this.leaderboardOptInCheck = function () {
@@ -1288,13 +1322,14 @@ export const MainWidget = function (options) {
   this.missingMember = function (isVisible) {
     var _this = this;
     var area = query(_this.settings.container, '.cl-main-widget-lb-missing-member');
+    var member = query(_this.settings.leaderboard.list, '.cl-lb-member-row');
+
+    if (area !== null && member !== null) {
+      area.innerHTML = member.innerHTML;
+    }
 
     if (!isVisible) {
-      var member = query(_this.settings.leaderboard.list, '.cl-lb-member-row');
-
       if (area !== null && member !== null) {
-        area.innerHTML = member.innerHTML;
-
         area.style.display = 'block';
       } else {
         area.style.display = 'none';
@@ -1443,6 +1478,8 @@ export const MainWidget = function (options) {
 
   this.hideCompetitionList = function (callback) {
     var _this = this;
+
+    _this.hideEmbeddedCompetitionDetailsContent();
 
     removeClass(_this.settings.tournamentListContainer, 'cl-show');
 
@@ -2024,6 +2061,8 @@ export const MainWidget = function (options) {
         activeNave = true;
       }
     });
+
+    _this.hideEmbeddedCompetitionDetailsContent();
 
     setTimeout(function () {
       if (typeof callback !== 'undefined') callback();
