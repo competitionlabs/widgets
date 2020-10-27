@@ -106,9 +106,9 @@ export const LbWidget = function (options) {
       leaderboardData: [],
       loadLeaderboardHistory: {},
       layoutSettings: {
-        tournamentList: true,
+        // tournamentList: true,
         imageBanner: false,
-        title: true,
+        // title: true,
         titleLinkToDetailsPage: false // if set to false will make the description available under title
       }
     },
