@@ -63,11 +63,11 @@
   --lb3-miniscoreboard-vertical-first-to-points-color: #7a7a7a;
   --lb3-miniscoreboard-first-to-date-color: #7a7a7a;
   --lb3-tournament-icon: url(../../images/big-tournament-icon.svg);
-  --lb3-tournament-header-back: var(--primary-color);
+  --lb3-tournament-header-back: var(--primary-color-darken);
   --lb3-tournament-header-border-bottom: 1px solid #4c4c4c;
   --lb3-tournament-header-label-color: var(--light-font-color);
   --lb3-tournament-header-date-color: var(--light-font-color);
-  --lb3-tournament-header-close-back-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-tournament-header-close-back-image: url(../../images/close-icon-grey.svg);
   --lb3-tournament-header-list-back-image: url(../../cl-black-theme/images/menu.svg);
   --lb3-tournament-details-bg-color: var(--primary-background-color);
   --lb3-tournament-details-label-color: var(--primary-font-color);
@@ -88,9 +88,9 @@
   --lb3-tournament-lb-third-place-back: none;
   --lb3-tournament-lb-third-place-color: #ffa800;
   --lb3-tournament-lb-third-place-border: 1px solid #e2b662;
-  --lb3-tournament-header-text-color: var(--primary-font-color);
+  --lb3-tournament-header-text-color: var(--light-grey);
   --lb3-tournament-header-text-size: 11px;
-  --lb3-tournament-top-results-bg-color: #E4E3D6;
+  --lb3-tournament-top-results-bg-color: var(--primary-color-darken);
   --lb3-tournament-top-results-bg-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
   --lb3-tournament-details-container-bg-color: var(--primary-background-color);
   --lb3-tournament-details-header-color: #e4bc1f;
@@ -113,7 +113,7 @@
   --lb3-tournament-list-item-cont-border-bottom: 1px solid var(--light-grey);
   --lb3-tournament-list-item-cont-back-hover: #e5e2d5;
   --lb3-tournament-lb-active-member-row-height: 28px;
-  --lb3-tournament-lb-active-member-row-back: #E4E3D6;
+  --lb3-tournament-lb-active-member-row-back: #ffffff;
   --lb3-tournament-lb-active-member-row-color: var(--primary-color);
   --lb3-tournament-lb-opt-in-back: var(--primary-background-color);
   --lb3-tournament-lb-opt-in-btn-back: var(--primary-background-color);
@@ -121,10 +121,10 @@
   --lb3-tournament-lb-opt-in-btn-back-hover: var(--primary-background-color-hover);
   --lb3-tournament-lb-opt-in-border: 1px solid var(--primary-font-color);
   --lb3-achievements-icon: url(../../images/big-challenge-icon.svg);
-  --lb3-achievements-header-bg-color: var(--primary-color);
+  --lb3-achievements-header-bg-color: var(--primary-color-darken);
   --lb3-achievements-header-label-color: var(--light-font-color);
   --lb3-achievements-header-date-color: var(--light-grey);
-  --lb3-achievements-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-achievements-header-close-image: url(../../images/close-icon-grey.svg);
   --lb3-achievements-header-border-bottom: 1px solid #4c4c4c;
   --lb3-achievements-details-bg-color: var(--primary-background-color);
   --lb3-achievements-container-bg-color: var(--primary-background-color);
@@ -142,14 +142,14 @@
   --lb3-achievements-progress-fill-color: #fff;
   --lb3-achievements-progress-text-color: var(--primary-color);
   --lb3-achievements-progress-border: 1px solid var(--primary-color);
-  --lb3-achievements-btn-bg-color: var(--primary-color);
-  --lb3-achievements-btn-hover-color: var(--primary-color-lighten);
+  --lb3-achievements-btn-bg-color: var(--light-font-color);
+  --lb3-achievements-btn-hover-color: var(--light-grey);
   --lb3-achievements-btn-border-radius: 3px;
   --lb3-achievements-btn-box-shadow: 1px 3px 4px rgba(0,0,0,0.2);
   --lb3-achievements-btn-border: none;
   --lb3-rewards-icon: url(../../images/big-reward-icon.svg);
-  --lb3-rewards-header-bg-color: var(--primary-color);
-  --lb3-rewards-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-rewards-header-bg-color: var(--primary-color-darken);
+  --lb3-rewards-header-close-image: url(../../images/close-icon-grey.svg);
   --lb3-rewards-header-border-bottom: 1px solid #4c4c4c;
   --lb3-rewards-footer-bg-color: var(--primary-color);
   --lb3-rewards-footer-top-border: 1px solid #4c4c4c;
@@ -167,7 +167,7 @@
   --lb3-rewards-details-body-color: var(--primary-font-color);
   --lb3-rewards-details-reward-bg-color: #173135;
   --lb3-rewards-winnings-bg-color: var(--primary-color);
-  --lb3-rewards-btn-bg-color: var(--primary-color);
+  --lb3-rewards-btn-bg-color: #ffffff;
   --lb3-rewards-btn-border: none;
   --lb3-rewards-btn-hover-color: var(--primary-color-lighten);
   --lb3-rewards-btn-border-radius: 3px;
@@ -175,10 +175,10 @@
   --lb3-rewards-accordion-container-show-bg-color: var(--darkest-color);
   --lb3-rewards-accordion-container-show-color: #ffffff;
   --lb3-messages-icon: url(../../images/big-message-icon.svg);
-  --lb3-messages-header-bg-color: var(--primary-color);
+  --lb3-messages-header-bg-color: var(--primary-color-darken);
   --lb3-messages-header-text-color: #fff;
   --lb3-messages-header-date-color: var(--primary-font-color);
-  --lb3-messages-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-messages-header-close-image: url(../../images/close-icon-grey.svg);
   --lb3-messages-header-border-bottom: 1px solid #4c4c4c;
   --lb3-messages-item-bg-color: var(--primary-background-color);
   --lb3-messages-item-hover-color: #e5e2d5;
@@ -193,7 +193,7 @@
   --lb3-messages-footer-text-color: #fff;
   --lb3-messages-footer-top-border: 1px solid #4c4c4c;
   --lb3-notification-back-image: url(../../images/big-blue-btn-icon2.png);
-  --prev-btn-icon-bg: url(../../images/prev-btn-icon-grey.svg);
+  --prev-btn-icon-bg: url(../../images/prev-btn-icon.svg);
 }
 
 .cl-widget-ms-wrapper, .cl-widget-notif-wrapper {
@@ -1375,13 +1375,12 @@
   background: var(--primary-color);
   border-radius: 5px;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header {
   float: left;
   width: 100%;
-  height: 40px;
+  height: 30px;
   background: var(--lb3-tournament-header-back);
   border-radius: 5px 5px 0 0;
   position: relative;
@@ -1401,7 +1400,7 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 30px;
-  height: 40px;
+  height: 30px;
   margin: 0 0 0 10px;
   background-size: 85%;
   opacity: 0.5;
@@ -1417,11 +1416,11 @@
   float: left;
   width: 60%;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   color: var(--lb3-tournament-header-label-color);
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
@@ -1430,7 +1429,7 @@
   position: absolute;
   top: 0;
   right: 50px;
-  line-height: 40px;
+  line-height: 30px;
   color: var(--lb3-tournament-header-date-color);
   font-size: 12px;
   min-width: 125px;
@@ -1442,10 +1441,10 @@
   background-image: var(--lb3-tournament-header-close-back-image);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 70%;
+  background-size: 100%;
   width: 30px;
-  height: 40px;
-  right: 3px;
+  height: 30px;
+  right: -15px;
   top: 0;
   cursor: pointer;
 }
@@ -1485,10 +1484,10 @@
   position: absolute;
   content: "";
   display: block;
-  background-image: url(../../images/info-icon-dark.svg);
+  background-image: url(../../images/info-icon.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 70%;
+  background-size: 100%;
   width: 30px;
   height: 30px;
   left: 0;
@@ -1539,9 +1538,9 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 22px;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 20px);
   z-index: 1;
   padding: 72px 0 22px 0;
   background: var(--lb3-tournament-container-bg-color);
@@ -1627,7 +1626,11 @@
   width: 100%;
   z-index: 1;
   overflow: auto;
-  height: calc(100% - 103px);
+  height: calc(100% - 160px);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-leaderboard-body {
+  height: calc(100% - 133px);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body-res {
@@ -1855,7 +1858,7 @@
   height: 30px;
   line-height: 30px;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1955,7 +1958,7 @@
   right: 0;
   top: 0;
   width: calc(100% - 73px);
-  height: 100%;
+  height: calc(100% - 70px);
   background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   display: none;
@@ -2221,14 +2224,13 @@
   display: none;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 70px);
   z-index: 1;
   left: 0;
   top: 0;
   background: var(--lb3-achievements-header-bg-color);
   border-radius: 5px;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-header {
@@ -2250,7 +2252,7 @@
   color: var(--lb3-achievements-header-label-color);
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 0 20%;
 }
 
@@ -2272,10 +2274,10 @@
   background-image: var(--lb3-achievements-header-close-image);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 70%;
+  background-size: 100%;
   width: 30px;
   height: 30px;
-  right: 3px;
+  right: -15px;
   top: 0;
 }
 
@@ -2349,7 +2351,7 @@
   height: 30px;
   line-height: 30px;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2558,7 +2560,7 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-section-ach .cl-ach-list-more {
   float: left;
   text-align: center;
-  color: var(--light-font-color);
+  color: var(--primary-color);
   position: absolute;
   top: -2px;
   right: 0;
@@ -2604,14 +2606,13 @@
   display: none;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 70px);
   z-index: 1;
   left: 0;
   top: 0;
   background: var(--lb3-rewards-header-bg-color);
   border-radius: 5px;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-reward-header {
@@ -2632,7 +2633,7 @@
   color: var(--light-font-color);
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 0 20%;
 }
 
@@ -2654,12 +2655,11 @@
   background-image: var(--lb3-rewards-header-close-image);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 70%;
+  background-size: 100%;
   width: 30px;
   height: 30px;
-  right: 3px;
+  right: -15px;
   top: 0;
-  border-bottom: var(--lb3-rewards-header-border-bottom);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-reward-details {
@@ -2682,6 +2682,7 @@
   padding: 36px 0 22px 0;
   background: var(--lb3-rewards-bg-color);
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-reward-list-body {
@@ -2921,7 +2922,7 @@
   height: 30px;
   line-height: 30px;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3035,7 +3036,7 @@
 .cl-main-widget-wrapper .cl-main-widget-reward-details-container .cl-main-widget-reward-claim-btn {
   display: inline-block;
   text-align: center;
-  color: var(--light-font-color);
+  color: var(--primary-color);
   right: 0;
   line-height: 22px;
   background: var(--lb3-rewards-btn-bg-color);
@@ -3069,14 +3070,13 @@
   display: none;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 70px);
   z-index: 1;
   left: 0;
   top: 0;
   background: var(--lb3-messages-header-bg-color);
   border-radius: 5px;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-header {
@@ -3097,7 +3097,7 @@
   color: var(--lb3-messages-header-text-color);
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 0 20%;
 }
 
@@ -3119,12 +3119,11 @@
   background-image: var(--lb3-messages-header-close-image);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 70%;
+  background-size: 100%;
   width: 30px;
   height: 30px;
-  right: 3px;
+  right: -15px;
   top: 0;
-  border-bottom: var(--lb3-messages-header-border-bottom);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-details {
@@ -3147,6 +3146,7 @@
   padding: 30px 0 22px 0;
   background: var(--lb3-messages-item-bg-color);
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-list-body {
@@ -3239,7 +3239,7 @@
   height: 30px;
   line-height: 30px;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3464,6 +3464,107 @@
   line-height: 16px;
 }
 
+/****************************************************************
+ ******* Embedded description styling and layout changes ********
+ ****************************************************************/
+.cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image-container {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 200px;
+}
+
+.cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image {
+  width: 100%;
+  height: auto;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-description-container {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  display: none;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-leaderboard {
+  top: 222px;
+  height: calc(100% - 232px);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-section-image-banner-active .cl-main-widget-lb-details-description-container {
+  height: calc(100% - 281px);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-container {
+  display: block;
+  position: relative;
+  height: calc(100% - 81px);
+  overflow: hidden;
+  background: var(--primary-color-darken);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description {
+  float: left;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: auto;
+  color: var(--light-grey);
+  font-size: 12px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description a {
+  color: var(--primary-font-color);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description p {
+  margin-bottom: 1em;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description img {
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close {
+  float: left;
+  width: 100%;
+  height: 25px;
+  background: var(--primary-color-darken);
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  cursor: pointer;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 2px);
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--primary-font-color);
+  border-right: transparent;
+  border-bottom: transparent;
+  transform: translate(-50%) rotate(45deg);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details {
+  height: calc(100% - 51px);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-leaderboard {
+  display: none;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-missing-member {
+  display: block !important;
+}
+
+/********************************************************************
+ ***************************** END **********************************
+ *******************************************************************/
 /**
  * *************************************
  * ********** Mobile Devices ***********
@@ -3520,7 +3621,7 @@
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header {
-    height: 42px;
+    height: 32px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
@@ -3530,12 +3631,12 @@
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
-    line-height: 42px;
+    line-height: 32px;
     font-size: 14px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-label {
-    line-height: 42px;
+    line-height: 32px;
     font-size: 16px;
     display: none;
   }
@@ -3550,27 +3651,27 @@
 
   .cl-main-widget-wrapper .cl-main-widget-lb-details-container {
     height: calc(100% - 64px);
-    top: 42px;
+    top: 32px;
   }
 }
 @media (max-height: 520px) and (max-width: 812px) {
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header {
-    height: 34px;
+    height: 30px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
-    width: 31px;
-    height: 31px;
+    width: 30px;
+    height: 30px;
     margin: 3px 0 0 10px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
-    line-height: 34px;
+    line-height: 30px;
     font-size: 13px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details {
-    height: 38px;
+    height: 30px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content {

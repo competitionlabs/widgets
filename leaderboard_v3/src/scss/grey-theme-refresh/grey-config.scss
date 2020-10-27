@@ -62,11 +62,11 @@
 
   // TOURNAMENTS
   --lb3-tournament-icon: url(../../images/big-tournament-icon.svg);
-  --lb3-tournament-header-back: var(--primary-color);
+  --lb3-tournament-header-back: var(--primary-color-darken);
   --lb3-tournament-header-border-bottom: 1px solid #4c4c4c;
   --lb3-tournament-header-label-color: var(--light-font-color);
   --lb3-tournament-header-date-color: var(--light-font-color);
-  --lb3-tournament-header-close-back-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-tournament-header-close-back-image: url(../../images/close-icon-grey.svg);
   --lb3-tournament-header-list-back-image: url(../../cl-black-theme/images/menu.svg);
 
   --lb3-tournament-details-bg-color: var(--primary-background-color);
@@ -92,10 +92,10 @@
   --lb3-tournament-lb-third-place-color: #ffa800;
   --lb3-tournament-lb-third-place-border: 1px solid #e2b662;
 
-  --lb3-tournament-header-text-color: var(--primary-font-color);
+  --lb3-tournament-header-text-color: var(--light-grey);
   --lb3-tournament-header-text-size: 11px;
 
-  --lb3-tournament-top-results-bg-color: #E4E3D6;
+  --lb3-tournament-top-results-bg-color: var(--primary-color-darken);
   --lb3-tournament-top-results-bg-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
   --lb3-tournament-details-container-bg-color: var(--primary-background-color);
   --lb3-tournament-details-header-color: #e4bc1f;
@@ -121,7 +121,7 @@
   --lb3-tournament-list-item-cont-back-hover: #e5e2d5;
 
   --lb3-tournament-lb-active-member-row-height: 28px;
-  --lb3-tournament-lb-active-member-row-back: #E4E3D6;
+  --lb3-tournament-lb-active-member-row-back: #ffffff;
   --lb3-tournament-lb-active-member-row-color: var(--primary-color);
 
   --lb3-tournament-lb-opt-in-back: var(--primary-background-color);
@@ -132,10 +132,10 @@
 
   // ACHIEVEMENTS
   --lb3-achievements-icon: url(../../images/big-challenge-icon.svg);
-  --lb3-achievements-header-bg-color: var(--primary-color);
+  --lb3-achievements-header-bg-color: var(--primary-color-darken);
   --lb3-achievements-header-label-color: var(--light-font-color);
   --lb3-achievements-header-date-color: var(--light-grey);
-  --lb3-achievements-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-achievements-header-close-image: url(../../images/close-icon-grey.svg);
   --lb3-achievements-header-border-bottom: 1px solid #4c4c4c;
   --lb3-achievements-details-bg-color: var(--primary-background-color);
   --lb3-achievements-container-bg-color: var(--primary-background-color);
@@ -153,8 +153,8 @@
   --lb3-achievements-progress-fill-color: #fff;
   --lb3-achievements-progress-text-color: var(--primary-color);
   --lb3-achievements-progress-border: 1px solid var(--primary-color);
-  --lb3-achievements-btn-bg-color:  var(--primary-color);;
-  --lb3-achievements-btn-hover-color:  var(--primary-color-lighten);
+  --lb3-achievements-btn-bg-color:  var(--light-font-color);
+  --lb3-achievements-btn-hover-color:  var(--light-grey);
   --lb3-achievements-btn-border-radius: 3px;
   --lb3-achievements-btn-box-shadow: 1px 3px 4px rgba(0,0,0,0.2);
   --lb3-achievements-btn-border: none;
@@ -162,8 +162,8 @@
   // REWARDS
 
   --lb3-rewards-icon: url(../../images/big-reward-icon.svg);
-  --lb3-rewards-header-bg-color: var(--primary-color);
-  --lb3-rewards-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-rewards-header-bg-color: var(--primary-color-darken);
+  --lb3-rewards-header-close-image: url(../../images/close-icon-grey.svg);
   --lb3-rewards-header-border-bottom: 1px solid #4c4c4c;
   --lb3-rewards-footer-bg-color: var(--primary-color);
   --lb3-rewards-footer-top-border: 1px solid #4c4c4c;
@@ -181,7 +181,7 @@
   --lb3-rewards-details-body-color: var(--primary-font-color);
   --lb3-rewards-details-reward-bg-color: #173135;
   --lb3-rewards-winnings-bg-color: var(--primary-color);
-  --lb3-rewards-btn-bg-color:  var(--primary-color);;
+  --lb3-rewards-btn-bg-color:  #ffffff;
   --lb3-rewards-btn-border: none;
   --lb3-rewards-btn-hover-color: var(--primary-color-lighten);
   --lb3-rewards-btn-border-radius: 3px;
@@ -193,10 +193,10 @@
   // MESSAGES
 
   --lb3-messages-icon: url(../../images/big-message-icon.svg);
-  --lb3-messages-header-bg-color: var(--primary-color);
+  --lb3-messages-header-bg-color: var(--primary-color-darken);
   --lb3-messages-header-text-color: #fff;
   --lb3-messages-header-date-color: var(--primary-font-color);
-  --lb3-messages-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-messages-header-close-image: url(../../images/close-icon-grey.svg);
   --lb3-messages-header-border-bottom: 1px solid #4c4c4c;
   --lb3-messages-item-bg-color: var(--primary-background-color);
   --lb3-messages-item-hover-color: #e5e2d5;
@@ -215,6 +215,6 @@
   --lb3-notification-back-image: url(../../images/big-blue-btn-icon2.png);
 
   //ASSETS
-  --prev-btn-icon-bg: url(../../images/prev-btn-icon-grey.svg);
+  --prev-btn-icon-bg: url(../../images/prev-btn-icon.svg);
 
 }
