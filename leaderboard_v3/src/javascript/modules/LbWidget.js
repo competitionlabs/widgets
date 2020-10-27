@@ -107,9 +107,9 @@ export const LbWidget = function (options) {
       loadLeaderboardHistory: {},
       layoutSettings: {
         tournamentList: true,
-        imageBanner: true,
+        imageBanner: false,
         title: true,
-        titleLinkToDetailsPage: true // if set to false will make the description available under title
+        titleLinkToDetailsPage: false // if set to false will make the description available under title
       }
     },
     navigation: { // primary navigation items, if all are disabled init will fail, if only 1 is enabled items will be hidden
@@ -1352,6 +1352,14 @@ export const LbWidget = function (options) {
 
         _this.activeCompetitionDataRefresh();
       });
+
+      // load embedded competition details
+    } else if (!_this.settings.leaderboard.layoutSettings.titleLinkToDetailsPage && hasClass(el, 'cl-main-widget-lb-details-content-label')) {
+      _this.settings.mainWidget.showEmbeddedCompetitionDetailsContent(function () {});
+
+      // hide embedded competition details
+    } else if (!_this.settings.leaderboard.layoutSettings.titleLinkToDetailsPage && hasClass(el, 'cl-main-widget-lb-details-description-close')) {
+      _this.settings.mainWidget.hideEmbeddedCompetitionDetailsContent(function () {});
 
       // load competition details
     } else if (hasClass(el, 'cl-main-widget-lb-details-content-label')) {
