@@ -1,0 +1,34 @@
+$path: 'https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts';
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('#{$path}/Gotham-Book.eot');
+	src: url('#{$path}/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+	url('#{$path}/Gotham-Book.woff2') format('woff2'),
+	url('#{$path}/Gotham-Book.woff') format('woff'),
+	url('#{$path}/Gotham-Book.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Gotham Bold';
+	src: url('#{$path}/GothamBold.eot');
+	src: url('#{$path}/GothamBold.eot?#iefix') format('embedded-opentype'),
+	url('#{$path}/GothamBold.woff2') format('woff2'),
+	url('#{$path}/GothamBold.woff') format('woff'),
+	url('#{$path}/GothamBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Gotham Light';
+	src: url('#{$path}/Gotham-Light.eot');
+	src: url('#{$path}/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+	url('#{$path}/Gotham-Light.woff2') format('woff2'),
+	url('#{$path}/Gotham-Light.woff') format('woff'),
+	url('#{$path}/Gotham-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal
+}
