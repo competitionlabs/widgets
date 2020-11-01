@@ -6,13 +6,14 @@ const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers')
 const argv = yargs(hideBin(process.argv)).argv
 
+var scssTheme = new RegExp(_THEME + "/.*.scss");
+var layoutsScssTheme = new RegExp("layouts" + "/.*.scss");
 module.exports = {
   entry: {
-    'leaderboard.v3.js': process.env.INLINE_CSS ? [
+    'leaderboard.v3.js': [
       './src/javascript/leaderboard.v3.js',
-    ] : [
-      './src/javascript/leaderboard.v3.js',
-      './src/scss/' + _THEME + '/style.scss'
+      './src/scss/' + _THEME + '/style.scss',
+      './src/scss/layouts/style.scss'
     ],
     'leaderboard.v3-selfinit.js': './src/javascript/leaderboard.v3-selfinit.js',
     'loader.js': './src/javascript/loader.js'
@@ -27,9 +28,7 @@ module.exports = {
     open: true,
     port: devServer.port,
     contentBase: path.join(__dirname, '../..'),
-    openPage: process.env.INLINE_CSS
-      ? '/examples/leaderboard_v3_inline_css.html'
-      : 'examples/leaderboard_v3-' + _THEME + '.html',
+    openPage: 'examples/leaderboard_v3-layouts.html?theme=' + _THEME,
     writeToDisk: true
   },
   optimization: {
@@ -53,26 +52,30 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: /\.scss$/i,
-        use: process.env.INLINE_CSS
-          ? [
-            {
-              loader: 'style-loader',
-              options: { injectType: 'styleTag' }
-            },
-            'css-loader',
-            'sass-loader'
-          ]
-          : [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '../css/theme/' + _THEME + '.css'
-                // name: '../css/theme/[name].css'
-              }
-            },
-            'sass-loader'
-          ]
+        test: scssTheme,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '../css/theme/' + _THEME + '.css'
+              // name: '../css/theme/[name].css'
+            }
+          },
+          'sass-loader'
+        ]
+      },
+      {
+        test: layoutsScssTheme,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '../css/theme/layouts.css'
+              // name: '../css/theme/[name].css'
+            }
+          },
+          'sass-loader'
+        ]
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,

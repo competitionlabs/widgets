@@ -12,6 +12,7 @@
     "dev:orange-theme": "cross-env --env.LANG=en --env.production=dev --env.THEME=orange-theme webpack-dev-server --config ./webpack/webpack.config.js --progress",
     "dev:black-theme": "cross-env --env.LANG=en --env.production=dev --env.THEME=black-theme webpack-dev-server --config ./webpack/webpack.config.js --progress",
     "dev:grey-theme-refresh": "cross-env --env.LANG=en --env.production=dev --env.THEME=grey-theme-refresh webpack-dev-server --config ./webpack/webpack.config.js --progress",
+    "dev:layouts": "cross-env --env.LANG=en --env.production=layouts webpack-dev-server --config ./webpack/webpack.config.js --progress",
     "build": "rimraf build && cross-env --env.LANG=en --env.production=prod --env.THEME=default-theme webpack --config ./webpack/webpack.config.js --progress",
     "build:dark-theme": "rimraf build && cross-env --env.LANG=en --env.production=prod --env.THEME=dark-theme webpack --config ./webpack/webpack.config.js --progress",
     "build:blue-theme": "rimraf build && cross-env --env.LANG=en --env.production=prod --env.THEME=blue-theme webpack --config ./webpack/webpack.config.js --progress",
@@ -21,7 +22,6 @@
     "build:orange-theme": "rimraf build && cross-env --env.LANG=en --env.production=prod --env.THEME=orange-theme webpack --config ./webpack/webpack.config.js --progress",
     "build:black-theme": "rimraf build && cross-env --env.LANG=en --env.production=prod --env.THEME=black-theme webpack --config ./webpack/webpack.config.js --progress",
     "build:inline-css": "rimraf build && cross-env --env.LANG=en env.INLINE_CSS=true --env.THEME=default-theme --env.production=prod webpack --config ./webpack/webpack.config.js --progress",
-
     "lint": "eslint ./src",
     "example": "webpack-dev-server --open --port 9001 --contentBase ../ --open-page /examples/leaderboard_v3.html",
     "example:loader": "webpack-dev-server --open --port 9001 --contentBase ../ --open-page /examples/leaderboard_v3_loader.html",
@@ -71,7 +71,8 @@
     "identicon.js": "^2.3.3",
     "jssha": "^3.1.0",
     "moment": "2.24.0",
-    "node-forge": "^0.10.0"
+    "node-forge": "^0.10.0",
+    "yargs": "^16.1.0"
   },
   "repository": {
     "type": "git",

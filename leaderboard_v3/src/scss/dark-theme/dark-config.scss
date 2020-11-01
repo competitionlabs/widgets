@@ -1,4 +1,16 @@
 :root {
+  --primary-color:#000000;
+  --primary-color-darken: #555555;
+  --primary-color-lighten: #999999;
+
+  --primary-font-color:#ffffff;
+  --primary-background-color:#F9F9F9;
+  --primary-background-color-hover: #d7d7d7;
+  --light-font-color:#ffffff;
+
+  --darkest-color: #212121;
+  --light-grey: #b4b4b4;
+
   // MAIN
   --lb3-widget-icon: url(../../images/logo-icon2.png);
   --lb3-widget-icon-2x: url(../../images/logo-icon2-x2.png);
@@ -142,6 +154,8 @@
   --lb3-achievements-btn-border-radius: 3px;
   --lb3-achievements-btn-box-shadow: 1px 3px 4px rgba(0,0,0,0.2);
   --lb3-achievements-btn-border: 1px solid #ffffff;
+  --lb3-achievements-progress-border: none;
+  --lb3-achievements-progress-text-color: #000000;
 
   // REWARDS
 
@@ -201,4 +215,7 @@
 
   // NOTIFICATIONS
   --lb3-notification-back-image: url(../../images/big-blue-btn-icon2.png);
+
+  //ASSETS
+  --prev-btn-icon-bg: url(../../images/prev-btn-icon.svg);
 }

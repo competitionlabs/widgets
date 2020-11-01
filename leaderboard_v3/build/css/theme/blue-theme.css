@@ -327,8 +327,7 @@
   height: 30px;
   border-radius: 100%;
   border: var(--lb3-miniscoreboard-close-wrapper-border);
-  border-left: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+  border: 2px solid transparent;
 }
 
 .cl-widget-ms-wrapper .cl-widget-ms-information-close {
@@ -1477,6 +1476,76 @@
   padding: 10px 0 0 0;
 }
 
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-image-container .cl-main-widget-lb-details-image {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  max-height: 120px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content {
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+/****************************************************************
+ ******* Embedded description styling and layout changes ********
+ ****************************************************************/
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-description-container {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  display: none;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-container {
+  display: block;
+  position: relative;
+  height: calc(100% - 81px);
+  overflow: hidden;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description {
+  float: left;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description img {
+  max-width: 100%;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close {
+  float: left;
+  width: 100%;
+  height: 15px;
+  background: #f1f1f1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details {
+  height: calc(100% - 51px);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-leaderboard {
+  display: none;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-missing-member {
+  display: block !important;
+}
+
+/********************************************************************
+ ***************************** END **********************************
+ *******************************************************************/
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content-label {
   text-align: center;
   padding: 0 40px;
@@ -3752,4 +3821,8 @@
   .cl-widget-notif-wrapper .cl-widget-notif-icon-wrapper .cl-widget-notif-icon {
     background-image: var(--lb3-achievements-icon-bg-image-2x);
   }
+}
+.cl-widget-ms-wrapper .cl-widget-ms-information-close-wrapper {
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 }

@@ -1,0 +1,123 @@
+.opt-mini-scoreboards{
+	float:left;
+	min-width: 1200px;
+	width: 100%;
+
+	.opt-1-mini-vertical-container{
+		float:left;
+		width:30%;
+
+		.cl-widget-ms-wrapper{
+			top:0;
+			left:30px;
+		}
+
+		.containers{
+			float:left;
+			width:50%;
+			position: relative;
+			height:270px;
+			overflow: hidden;
+		}
+	}
+
+	.opt-1-mini-horizontal-container{
+		float:left;
+		width:70%;
+	}
+
+	.opt-1-mini-horizontal{
+		float:left;
+		width:50%;
+		position: relative;
+		height:190px;
+		overflow: hidden;
+	}
+	.opt-1-mini-horizontal-small{
+		float:left;
+		width:50%;
+
+		.opt-1-mini-horizontal-opt{
+			float:left;
+			width:100%;
+			position: relative;
+			height:100px;
+			overflow: hidden;
+		}
+		.opt-1-mini-horizontal-sum-best{
+			float:left;
+			width:100%;
+			position: relative;
+			height:100px;
+			overflow: hidden;
+		}
+	}
+	.opt-1-mini-horizontal-first-to{
+		float:left;
+		width:50%;
+		position: relative;
+		height:180px;
+		overflow: hidden;
+	}
+}
+.opt-main-container-wrapper{
+	float:left;
+	max-width: 1400px;
+	width: 100%;
+
+	.opt-main-container-tournaments, .opt-main-container-achievements, .opt-main-container-rewards, .opt-main-container-messages{
+		float:left;
+		width: 100%;
+
+		.cl-main-widget-wrapper{
+			position: absolute;
+		}
+		.containers{
+			float:left;
+			width: 50%;
+			padding:0 0 20px 0;
+			position: relative;
+			height:700px;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.opt-main-container-wrapper{
+		.opt-main-container-tournaments, .opt-main-container-achievements, .opt-main-container-rewards, .opt-main-container-messages{
+			.containers{
+				width: 100%;
+				height:500px;
+			}
+		}
+	}
+}
+@media (max-width: 800px) {
+	.opt-mini-scoreboards {
+		.opt-1-mini-vertical-container {
+			float: left;
+			width: 100%;
+
+			.containers {
+				width: 100%;
+			}
+		}
+
+		.opt-1-mini-horizontal-container {
+			width: 100%;
+		}
+
+		.opt-1-mini-horizontal {
+			width: 100%;
+		}
+
+		.opt-1-mini-horizontal-small {
+			float: left;
+			width: 100%;
+		}
+
+		.opt-1-mini-horizontal-first-to {
+			width: 100%;
+		}
+	}
+}

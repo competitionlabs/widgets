@@ -20,6 +20,15 @@
   font-style: normal;
 }
 :root {
+  --primary-color:#000000;
+  --primary-color-darken: #555555;
+  --primary-color-lighten: #999999;
+  --primary-font-color:#ffffff;
+  --primary-background-color:#F9F9F9;
+  --primary-background-color-hover: #d7d7d7;
+  --light-font-color:#ffffff;
+  --darkest-color: #212121;
+  --light-grey: #b4b4b4;
   --lb3-widget-icon: url(../../images/logo-icon2.png);
   --lb3-widget-icon-2x: url(../../images/logo-icon2-x2.png);
   --lb3-widget-font: "Gotham A", "Gotham B", "Gotham", Helvetica, Arial, serif;
@@ -137,6 +146,7 @@
   --lb3-achievements-btn-border-radius: 8px;
   --lb3-achievements-btn-box-shadow: 1px 3px 5px #666;
   --lb3-achievements-btn-border: none;
+  --lb3-achievements-progress-text-color: #000000;
   --lb3-rewards-icon: url(../../images/big-reward-icon.svg);
   --lb3-rewards-icon-bg-image: url(../../images/big-orange-btn-icon2.png);
   --lb3-rewards-icon-bg-image-2x: url(../../images/big-orange-btn-icon2-x2.png);
@@ -188,6 +198,7 @@
   --lb3-messages-footer-text-color: #212121;
   --lb3-messages-footer-top-border: none;
   --lb3-notification-back-image: url(../../images/big-blue-btn-icon2.png);
+  --prev-btn-icon-bg: url(../../images/prev-btn-icon.svg);
 }
 
 .cl-widget-ms-wrapper, .cl-widget-notif-wrapper {
@@ -316,8 +327,7 @@
   height: 30px;
   border-radius: 100%;
   border: var(--lb3-miniscoreboard-close-wrapper-border);
-  border-left: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+  border: 2px solid transparent;
 }
 
 .cl-widget-ms-wrapper .cl-widget-ms-information-close {
@@ -898,7 +908,7 @@
   float: left;
   width: 40%;
   text-align: right;
-  color: #ffffff;
+  color: var(--light-font-color);
   font-size: 10px;
 }
 
@@ -974,10 +984,10 @@
   display: block;
   float: left;
   width: 100%;
-  background: #212121;
-  border: 2px solid #000000;
+  background: var(--darkest-color);
+  border: 2px solid var(--primary-color);
   border-radius: 10px 10px 10px 10px;
-  color: #ffffff;
+  color: var(--light-font-color);
   padding: 27px 5px 0 5px;
   height: 199px;
   transition: all 0.3s ease;
@@ -999,7 +1009,7 @@
   right: 26px;
   top: unset;
   z-index: 1;
-  background: #212121;
+  background: var(--darkest-color);
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -1063,7 +1073,7 @@
   float: left;
   width: 100%;
   text-align: center;
-  color: #ffffff;
+  color: var(--light-font-color);
   font-size: 12px;
   padding: 3px 0 10px 0;
   line-height: 17px;
@@ -1124,12 +1134,12 @@
   float: left;
   width: 100%;
   cursor: pointer;
-  background: #000000;
+  background: var(--primary-color);
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--light-font-color);
   border-radius: 5px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--light-font-color);
   line-height: 16px;
   font-size: 9px;
   font-weight: 400;
@@ -1378,7 +1388,7 @@
   z-index: 1;
   left: 0;
   top: 0;
-  background: #000000;
+  background: var(--primary-color);
   border-radius: 5px;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
   overflow: hidden;
@@ -1459,11 +1469,11 @@
   z-index: 2;
 }
 
-.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-image-container {
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content {
   float: left;
   width: 100%;
   text-align: center;
-  padding: 0 0 10px 0;
+  padding: 10px 0 0 0;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-image-container .cl-main-widget-lb-details-image {
@@ -1483,8 +1493,26 @@
 }
 
 /****************************************************************
- ******* Embedded description styling and layout changes ********
- ****************************************************************/
+	 ******* Embedded description styling and layout changes ********
+	 ****************************************************************/
+.cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image-container {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 200px;
+  text-align: center;
+}
+
+.cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image {
+  max-height: 200px;
+  width: auto;
+}
+
+@media screen and (min-width: 1040px) {
+  .cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image {
+    width: 100%;
+    height: auto;
+  }
+}
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-description-container {
   float: left;
   width: 100%;
@@ -1492,11 +1520,21 @@
   display: none;
 }
 
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-leaderboard {
+  top: 200px;
+  height: calc(100% - 200px);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-section-image-banner-active .cl-main-widget-lb-details-description-container {
+  height: calc(100% - 265px);
+}
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-container {
   display: block;
   position: relative;
-  height: calc(100% - 81px);
+  height: calc(100% - 70px);
   overflow: hidden;
+  background: var(--primary-color-darken);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description {
@@ -1505,20 +1543,46 @@
   height: 100%;
   max-height: 100%;
   overflow: auto;
+  color: var(--light-grey);
+  font-size: 12px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description a {
+  color: var(--primary-font-color);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description p {
+  margin-bottom: 1em;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description img {
   max-width: 100%;
+  margin-bottom: 1em;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close {
   float: left;
   width: 100%;
-  height: 15px;
-  background: #f1f1f1;
+  height: 25px;
+  background: var(--primary-color-darken);
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   left: 0;
+  cursor: pointer;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 2px);
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--primary-font-color);
+  border-right: transparent;
+  border-bottom: transparent;
+  transform: translate(-50%) rotate(45deg);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details {
@@ -1531,6 +1595,10 @@
 
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-missing-member {
   display: block !important;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description *:last-child {
+  margin-bottom: 30px;
 }
 
 /********************************************************************
@@ -1555,7 +1623,7 @@
   position: absolute;
   content: "";
   display: block;
-  background-image: url(../../images/info-icon.svg);
+  background-image: url(../../images/info-icon-dark.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 70%;
@@ -1735,7 +1803,7 @@
   background: #ffe500;
   border: 1px solid #e2d45f;
   border-radius: 100%;
-  color: #000000;
+  color: var(--primary-color);
   text-align: center;
   font-size: 11px;
   font-weight: 400;
@@ -1949,7 +2017,7 @@
   top: 16px;
   width: 30px;
   height: 26px;
-  background-image: url(../../images/prev-btn-icon.svg);
+  background-image: var(--prev-btn-icon-bg);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
@@ -2043,7 +2111,7 @@
   top: 30%;
   line-height: 30px;
   text-align: left;
-  color: #ffffff;
+  color: var(--light-font-color);
   font-size: 14px;
   font-weight: bold;
   display: inline-block;
@@ -2058,7 +2126,7 @@
   position: absolute;
   left: 8px;
   width: 16px;
-  background: #ffffff;
+  background: var(--light-font-color);
   animation: cl-main-widget-pre-loader-content 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 
@@ -2129,7 +2197,7 @@
   top: 13px;
   width: 30px;
   height: 26px;
-  background-image: url(../../images/prev-btn-icon.svg);
+  background-image: var(--prev-btn-icon-bg);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
@@ -2151,7 +2219,7 @@
   height: auto;
   margin: 0;
   padding: 0;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--light-font-color);
   border-collapse: collapse;
   border-spacing: 0;
   vertical-align: inherit;
@@ -2253,7 +2321,7 @@
   bottom: 22px;
   left: 0;
   z-index: 3;
-  color: #ffffff;
+  color: var(--light-font-color);
   padding: 10px 30px;
   background: var(--lb3-tournament-lb-opt-in-back);
   text-align: center;
@@ -2443,7 +2511,7 @@
   top: 16px;
   width: 30px;
   height: 26px;
-  background-image: url(../../images/prev-btn-icon.svg);
+  background-image: var(--prev-btn-icon-bg);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
@@ -2603,12 +2671,13 @@
   background: var(--lb3-achievements-progress-bg-color);
   height: 13px;
   border-radius: 5px;
+  border: var(--lb3-achievements-progress-border);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-section-ach .cl-ach-list-progression-bar {
   float: left;
   width: 0;
-  height: 13px;
+  height: 11px;
   background: var(--lb3-achievements-progress-fill-color);
   border-radius: 5px;
   transition: all 0.3s ease;
@@ -2617,7 +2686,7 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-section-ach .cl-ach-list-progression-bar.cl-ach-complete {
   font-size: 10px;
   line-height: 13px;
-  color: #000000;
+  color: var(--lb3-achievements-progress-text-color);
   width: 100%;
   text-align: right;
   padding: 0 6px;
@@ -2627,7 +2696,7 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-section-ach .cl-ach-list-more {
   float: left;
   text-align: center;
-  color: #ffffff;
+  color: var(--light-font-color);
   position: absolute;
   top: -2px;
   right: 0;
@@ -2698,7 +2767,7 @@
   width: 60%;
   text-align: center;
   line-height: 30px;
-  color: #ffffff;
+  color: var(--light-font-color);
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
@@ -2712,7 +2781,7 @@
   top: 0;
   right: 50px;
   line-height: 30px;
-  color: #ffffff;
+  color: var(--light-font-color);
   font-size: 11px;
   min-width: 125px;
 }
@@ -2849,7 +2918,7 @@
   line-height: 26px;
   font-size: 14px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--light-font-color);
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -2942,7 +3011,7 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-tournaments-list .cl-tour-list-details-label {
   float: left;
   width: 100%;
-  color: #ffffff;
+  color: var(--primary-font-color);
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
@@ -2954,7 +3023,7 @@
   font-size: 11px;
   max-height: 40px;
   line-height: 16px;
-  color: #ffffff;
+  color: var(--primary-font-color);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-reward-details-container {
@@ -3014,7 +3083,7 @@
   top: 16px;
   width: 30px;
   height: 26px;
-  background-image: url(../../images/prev-btn-icon.svg);
+  background-image: var(--prev-btn-icon-bg);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
@@ -3089,7 +3158,7 @@
   padding: 30px 0 30px 20px;
   font-size: 40px;
   line-height: 60px;
-  color: #ffffff;
+  color: var(--light-font-color);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-reward-details-container .cl-main-widget-reward-claim-container {
@@ -3104,7 +3173,7 @@
 .cl-main-widget-wrapper .cl-main-widget-reward-details-container .cl-main-widget-reward-claim-btn {
   display: inline-block;
   text-align: center;
-  color: #ffffff;
+  color: var(--light-font-color);
   right: 0;
   line-height: 22px;
   background: var(--lb3-rewards-btn-bg-color);
@@ -3332,7 +3401,7 @@
   top: 16px;
   width: 30px;
   height: 26px;
-  background-image: url(../../images/prev-btn-icon.svg);
+  background-image: var(--prev-btn-icon-bg);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
@@ -3458,10 +3527,10 @@
   display: block;
   float: left;
   width: 100%;
-  background: #212121;
-  border: 2px solid #000000;
+  background: var(--darkest-color);
+  border: 2px solid var(--primary-color);
   border-radius: 10px 5px 5px 10px;
-  color: #ffffff;
+  color: var(--light-font-color);
   padding: 0 10px 0 42px;
   height: 63px;
   transition: all 0.3s ease;
@@ -3481,11 +3550,11 @@
   top: -10px;
   right: -10px;
   z-index: 1;
-  background: #212121;
+  background: var(--darkest-color);
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 2px solid #000000;
+  border: 2px solid var(--primary-color);
   border-left: 2px solid transparent;
   border-bottom: 2px solid transparent;
 }
@@ -3518,7 +3587,7 @@
 .cl-widget-notif-wrapper .cl-widget-notif-information-details-label {
   float: left;
   width: 100%;
-  color: #ffffff;
+  color: var(--light-font-color);
   font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
@@ -3528,51 +3597,9 @@
 .cl-widget-notif-wrapper .cl-widget-notif-information-details-description {
   float: left;
   width: 100%;
-  color: #ffffff;
+  color: var(--light-font-color);
   font-size: 10px;
   line-height: 16px;
-}
-
-.cl-widget-canvas-overlay-wrapper {
-  display: none;
-  float: left;
-  width: 100%;
-  max-width: 100%;
-  min-width: 99%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 1002;
-  overflow: hidden;
-  visibility: visible;
-  outline: none;
-  border: none;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.cl-widget-canvas-overlay-wrapper .cl-widget-canvas {
-  float: left;
-  width: 100%;
-  max-width: 100%;
-  min-width: 99%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 1;
-  overflow: hidden;
-  visibility: visible;
-  outline: none;
-  border: none;
-  left: 0;
-  top: 0;
 }
 
 /**
@@ -3852,4 +3879,65 @@
   .cl-widget-notif-wrapper .cl-widget-notif-icon-wrapper .cl-widget-notif-icon {
     background-image: var(--lb3-achievements-icon-bg-image-2x);
   }
+}
+.cl-widget-ms-wrapper .cl-widget-ms-information-close-wrapper {
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-image-container {
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content-label::before {
+  background-image: url(../../images/info-icon.svg);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-section-ach .cl-ach-list-progression-bar {
+  height: 13px;
+}
+
+.cl-widget-canvas-overlay-wrapper {
+  display: none;
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  min-width: 99%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1002;
+  overflow: hidden;
+  visibility: visible;
+  outline: none;
+  border: none;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.cl-widget-canvas-overlay-wrapper .cl-widget-canvas {
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  min-width: 99%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  visibility: visible;
+  outline: none;
+  border: none;
+  left: 0;
+  top: 0;
 }

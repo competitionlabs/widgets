@@ -109,7 +109,7 @@ export const LbWidget = function (options) {
         // tournamentList: true,
         imageBanner: false,
         // title: true,
-        titleLinkToDetailsPage: false // if set to false will make the description available under title
+        titleLinkToDetailsPage: true // if set to false will make the description available under title
       }
     },
     navigation: { // primary navigation items, if all are disabled init will fail, if only 1 is enabled items will be hidden
@@ -180,6 +180,12 @@ export const LbWidget = function (options) {
   if (typeof options !== 'undefined') {
     this.settings = mergeObjects(this.settings, options);
   }
+
+  // alias references to modules
+  this.CanvasAnimation = CanvasAnimation;
+  this.Notifications = Notifications;
+  this.MiniScoreBoard = MiniScoreBoard;
+  this.MainWidget = MainWidget;
 
   this.log = function (message) {
     if (this.settings.debug) {

@@ -9,7 +9,7 @@ module.exports = {
       './src/javascript/leaderboard.v3.js',
     ] : [
       './src/javascript/leaderboard.v3.js',
-      './src/scss/' + process.env.THEME + '/style.scss'
+      './src/scss/' + _THEME + '/style.scss'
     ],
     'leaderboard.v3-selfinit.js': './src/javascript/leaderboard.v3-selfinit.js',
     'loader.js': './src/javascript/loader.js'
@@ -48,7 +48,7 @@ module.exports = {
               {
                 loader: 'file-loader',
                 options: {
-                  name: '../css/theme/' + process.env.THEME + '.css'
+                  name: '../css/theme/' + _THEME + '.css'
                 }
               },
               'sass-loader'
@@ -75,7 +75,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.LANG': JSON.stringify(process.env.LANG),
       'process.env.INLINE_CSS': JSON.stringify(process.env.INLINE_CSS),
-      'process.env.THEME': JSON.stringify(process.env.THEME)
+      'process.env.THEME': JSON.stringify(_THEME)
     }),
     new BundleAnalyzerPlugin(),
     new webpack.IgnorePlugin({
