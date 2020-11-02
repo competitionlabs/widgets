@@ -6,8 +6,8 @@ const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers')
 const argv = yargs(hideBin(process.argv)).argv
 
-var scssTheme = new RegExp(_THEME + "/.*.scss");
-var layoutsScssTheme = new RegExp("layouts" + "/.*.scss");
+// var scssTheme = new RegExp(_THEME + "/.*.scss");
+// var layoutsScssTheme = new RegExp("layouts" + "/.*.scss");
 module.exports = {
   entry: {
     'leaderboard.v3.js': [
@@ -52,7 +52,10 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: scssTheme,
+        test: /\.scss$/i,
+        include: [
+          path.resolve(__dirname, '../src/scss/' + _THEME)
+        ],
         use: [
           {
             loader: 'file-loader',
@@ -65,7 +68,10 @@ module.exports = {
         ]
       },
       {
-        test: layoutsScssTheme,
+        test: /\.scss$/i,
+        include: [
+          path.resolve(__dirname, '../src/scss/layouts')
+        ],
         use: [
           {
             loader: 'file-loader',
