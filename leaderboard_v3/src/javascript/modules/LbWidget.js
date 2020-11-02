@@ -119,17 +119,17 @@ export const LbWidget = function (options) {
         containerClass: 'cl-main-widget-lb'
       },
       achievements: {
-        enable: true,
+        enable: false,
         navigationClass: 'cl-main-widget-navigation-ach',
         containerClass: 'cl-main-widget-section-ach'
       },
       rewards: {
-        enable: true,
+        enable: false,
         navigationClass: 'cl-main-widget-navigation-rewards',
         containerClass: 'cl-main-widget-section-reward'
       },
       inbox: {
-        enable: true,
+        enable: false,
         navigationClass: 'cl-main-widget-navigation-inbox',
         containerClass: 'cl-main-widget-section-inbox'
       }
