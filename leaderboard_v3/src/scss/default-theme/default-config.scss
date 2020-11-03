@@ -11,48 +11,55 @@
   --darkest-color: #212121;
   --light-grey: #b4b4b4;
 
-  // MAIN
+   // MAIN
   --lb3-widget-icon: url(../../images/logo-icon2.png);
   --lb3-widget-icon-2x: url(../../images/logo-icon2-x2.png);
   --lb3-widget-font: "Gotham A", "Gotham B", "Gotham", Helvetica, Arial, serif;
-  --lb3-widget-bg-color: #212121;
-  --lb3-widget-border-color: #000000;
+  --lb3-widget-bg-color: var(--primary-color);
+  --lb3-widget-border-color: var(--primary-color);
   --lb3-widget-text-color: #ffffff;
   --lb3-widget-date-text-color: #ffffff;
-  --lb3-widget-header-text-color: #7a7a7a;
+  --lb3-widget-header-text-color: var(--light-grey);
 
   --lb3-widget-navigation-icon-width: 73px;
   --lb3-widget-navigation-icon-height: 73px;
 
+  --lb3-widget-info-icon-bg-img: url(../../images/info-icon-dark.svg);
+  --lb3-widget-image-banner-active-info-icon-bg-img:  url(../../images/info-icon.svg);
+
+  --main-widget-image-banner-active-details-content-background: #28A02A;
+
   // CLOSE BTN
-  --lb3-close-btn-bg-color: #212121;
+  --lb3-close-btn-bg-color: var(--primary-color);
 
   // MINI SCOREBOARD
-  --lb3-miniscoreboard-close-wrapper-border: 2px solid #000000;
-  --lb3-miniscoreboard-close-btn-back: #767676;
-  --lb3-miniscoreboard-close-btn-color: #262626;
+  --lb3-miniscoreboard-close-wrapper-border: 2px solid var(--primary-color);
+  --lb3-miniscoreboard-close-btn-back: var(--primary-color);
+  --lb3-miniscoreboard-close-btn-color: #fff;
   --lb3-miniscoreboard-close-btn-font-size: 18px;
 
-  --lb3-miniscoreboard-opt-btn-border: none;
-  --lb3-miniscoreboard-opt-btn-back: #33c334;
-  --lb3-miniscoreboard-opt-btn-back-hover: #21a722;
-  --lb3-miniscoreboard-opt-btn-color: #ffffff;
-  --lb3-miniscoreboard-opt-line-height: 24px;
-  --lb3-miniscoreboard-opt-font-size: 15px;
+  --lb3-miniscoreboard-opt-btn-border: 1px solid var(--primary-background-color);
+  --lb3-miniscoreboard-opt-btn-back: var(--primary-background-color);
+  --lb3-miniscoreboard-opt-btn-back-hover: var(--primary-color);
+  --lb3-miniscoreboard-opt-btn-color-hover: #ffffff;
+  --lb3-miniscoreboard-opt-btn-color: var(--primary-color);
+  --lb3-miniscoreboard-opt-line-height: 22px;
+  --lb3-miniscoreboard-opt-font-size: 14px;
 
-  --lb3-miniscoreboard-date-color: #7a7a7a;
+  --lb3-miniscoreboard-date-color: var(--light-grey);
 
-  --lb3-miniscoreboard-rank-label-color: #7a7a7a;
-  --lb3-miniscoreboard-points-label-color: #7a7a7a;
+  --lb3-miniscoreboard-rank-label-color: var(--light-grey);
+  --lb3-miniscoreboard-points-label-color: var(--light-grey);
 
   // FIRST TO
-  --lb3-miniscoreboard-inverse-first-to-date-color: #7a7a7a;
-  --lb3-miniscoreboard-inverse-first-to-date-only-color: #ffffff;
-  --lb3-miniscoreboard-first-to-header-rank-color: #7a7a7a;
-  --lb3-miniscoreboard-first-to-header-points-color: #7a7a7a;
+  --lb3-miniscoreboard-inverse-first-to-date-color: var(--light-grey);
+  --lb3-miniscoreboard-inverse-first-to-date-only-color: var(--light-grey);
+  --lb3-miniscoreboard-first-to-header-rank-color: var(--light-grey);
+  --lb3-miniscoreboard-first-to-header-points-color: var(--light-grey);
 
-  --lb3-miniscoreboard-vertical-first-to-rank-color: #7a7a7a;
-  --lb3-miniscoreboard-vertical-first-to-points-color: #7a7a7a;
+  --lb3-miniscoreboard-vertical-first-to-rank-color: var(--light-grey);
+  --lb3-miniscoreboard-vertical-first-to-points-color: var(--light-grey);
+  --lb3-miniscoreboard-first-to-date-color: var(--light-grey);
 
   // TOURNAMENTS
   --lb3-tournament-icon: url(../../images/big-tournament-icon.svg);
@@ -62,11 +69,12 @@
   --lb3-tournament-header-border-bottom: none;
   --lb3-tournament-header-label-color: #ffffff;
   --lb3-tournament-header-date-color: #ffffff;
-  --lb3-tournament-header-close-back-image: url(../../images/close-icon.svg);
+  --lb3-tournament-header-close-back-image: url(../../cl-black-theme/images/close-icon.svg);
   --lb3-tournament-header-list-back-image: url(../../images/menu.svg);
 
   --lb3-tournament-details-bg-color: #28a02a;
   --lb3-tournament-details-label-color: #ffffff;
+  --lb3-image-banner-active-tournament-details-label-color: #ffffff;
   --lb3-tournament-footer-bg-color: #2bb22e;
   --lb3-tournament-footer-top-border: none;
   --lb3-tournament-footer-text-color: #212121;
@@ -75,6 +83,8 @@
   --lb3-tournament-container-text-size: 12px;
   --lb3-tournament-container-height: 26px;
   --lb3-tournament-container-line-height: 26px;
+  --lb3-tournament-description-close-arrow-up-color: #ffffff;
+  --lb3-tournament-description-close-background: #2bb22e;
 
   --lb3-tournament-lb-first-place-back: none;
   --lb3-tournament-lb-first-place-color: #ffe500;
@@ -92,8 +102,10 @@
 
 
   --lb3-tournament-header-text-color: #a9d9aa;
-  --lb3-tournament-top-results-bg-color: #0d980e;
+  --lb3-tournament-top-results-bg-color: #E4E3D6;
   --lb3-tournament-top-results-bg-box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.2);
+  --lb3-tournament-top-results-text-color: #000;
+
 
   --lb3-tournament-details-container-bg-color: #28a02a;
   --lb3-tournament-details-header-color: #ffffff;
@@ -106,6 +118,9 @@
   --lb3-tournament-details-opt-in-back-border-top: none;
   --lb3-tournament-details-opt-in-btn-back: #33c334;
   --lb3-tournament-details-opt-in-btn-back-hover: #21a722;
+  --lb3-tournament-details-opt-in-btn-color-hover: #ffffff;
+  --lb3-tournament-details-opt-in-btn-border-hover: 1px solid #21a722;
+  
   --lb3-tournament-details-opt-in-color: #ffffff;
   --lb3-tournament-details-opt-in-border: none;
 
@@ -119,14 +134,18 @@
   --lb3-tournament-list-item-cont-back-hover: #239025;
 
   --lb3-tournament-lb-active-member-row-height: 26px;
-  --lb3-tournament-lb-active-member-row-back: #000000;
-  --lb3-tournament-lb-active-member-row-color: #ffffff;
+  --lb3-tournament-lb-active-member-row-back: #E4E3D6;
+  --lb3-tournament-lb-active-member-row-color: var(--primary-color);
 
   --lb3-tournament-lb-opt-in-back: #28A02A;
   --lb3-tournament-lb-opt-in-btn-back: #33c334;
   --lb3-tournament-lb-opt-in-btn-color: #ffffff;
   --lb3-tournament-lb-opt-in-btn-back-hover: #21a722;
   --lb3-tournament-lb-opt-in-border: none;
+
+  --lb3-tournament-lb-opt-in-btn-back-hover:  #28A02A;
+  --lb3-tournament-lb-opt-in-btn-color-hover: #fff;
+  --lb3-tournament-lb-opt-in-btn-border-hover: 1px solid #28A02A;
 
   // ACHIEVEMENTS
   --lb3-achievements-icon: url(../../images/big-challenge-icon.svg);
@@ -135,7 +154,7 @@
   --lb3-achievements-header-bg-color: #23b3dd;
   --lb3-achievements-header-label-color: #ffffff;
   --lb3-achievements-header-date-color: #ffffff;
-  --lb3-achievements-header-close-image: url(../../images/close-icon.svg);
+  --lb3-achievements-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
   --lb3-achievements-header-border-bottom: none;
 
   --lb3-achievements-details-bg-color: #00a1bd;
@@ -165,7 +184,7 @@
   --lb3-rewards-icon-bg-image: url(../../images/big-orange-btn-icon2.png);
   --lb3-rewards-icon-bg-image-2x: url(../../images/big-orange-btn-icon2-x2.png);
   --lb3-rewards-header-bg-color: #f18d32;
-  --lb3-rewards-header-close-image: url(../../images/close-icon.svg);
+  --lb3-rewards-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
   --lb3-rewards-header-border-bottom: none;
   --lb3-rewards-footer-bg-color: #f18d32;
   --lb3-rewards-footer-top-border: none;
@@ -185,7 +204,7 @@
   --lb3-rewards-details-reward-bg-color: #173135;
   --lb3-rewards-winnings-bg-color: #cb6e09;
   --lb3-rewards-btn-bg-color: #ff6d00;
-  --lb3-rewards-btn-border: 1px solid #ffffff;
+  --lb3-rewards-btn-border: 1px solid #ff6d00;
   --lb3-rewards-btn-hover-color: #ec6603;
   --lb3-rewards-btn-border-radius: 3px;
   --lb3-rewards-btn-box-shadow: 1px 3px 4px rgba(0,0,0,0.2);
@@ -201,7 +220,7 @@
   --lb3-messages-header-bg-color: #f84128;
   --lb3-messages-header-text-color: #ffffff;
   --lb3-messages-header-date-color: #ffffff;
-  --lb3-messages-header-close-image: url(../../images/close-icon.svg);
+  --lb3-messages-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
   --lb3-messages-header-border-bottom: none;
   --lb3-messages-item-bg-color: #ff020c;
   --lb3-messages-item-hover-color: #d50004;

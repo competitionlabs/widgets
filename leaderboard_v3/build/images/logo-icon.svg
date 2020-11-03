@@ -1,0 +1,24 @@
+<svg width="60" height="59" viewBox="0 0 257.52 265.52" shape-rendering="geometricPrecision" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <filter id="dropshadow" height="130%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="5"/> <!-- stdDeviation is how much to blur -->
+        <feOffset dx="2" dy="3" result="offsetblur"/> <!-- how much to offset -->
+        <feComponentTransfer>
+            <feFuncA type="linear" slope="0.8"/> <!-- slope is the opacity of the shadow -->
+        </feComponentTransfer>
+        <feMerge>
+            <feMergeNode/> <!-- this contains the offset blurred image -->
+            <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+        </feMerge>
+    </filter>
+    <g style="filter:url(#dropshadow)">
+        <polygon shape-rendering="geometricPrecision" class="cls-1" fill="#f48f3b" points="162.66 0 257.52 94.12 129.6 128.61 162.66 0"/>
+        <polygon shape-rendering="geometricPrecision" class="cls-2" fill="#01a3bb" points="0 162.29 129.6 128.61 223.79 222.05 0 162.29"/>
+        <polygon shape-rendering="geometricPrecision" class="cls-3" fill="#3bb54c" points="94.24 256.52 223.79 222.05 0 162.29 94.24 256.52"/>
+        <polygon shape-rendering="geometricPrecision" class="cls-4" fill="#e74a39" points="257.52 94.12 129.6 128.61 223.79 222.05 257.52 94.12"/>
+        <polygon shape-rendering="geometricPrecision" class="cls-5" fill="#000100" points="34.69 34.02 162.66 0 129.6 128.61 0 162.29 34.69 34.02"/>
+        <path class="cls-6" fill="#ffffff" d="M131.19,57.25a9.52,9.52,0,0,1,9.45,9.48V97.89a9.52,9.52,0,0,1-9.45,9.47h-40l.39-40.63A9.51,9.51,0,0,1,101,57.25" transform="translate(-3.69 -3.48)"/>
+        <path class="cls-6" fill="#ffffff" d="M131.19,206.22H101a9.49,9.49,0,0,1-9.45-9.42l-.39-40.35h40a9.49,9.49,0,0,1,9.45,9.42V196.8a9.49,9.49,0,0,1-9.45,9.42" transform="translate(-3.69 -3.48)"/>
+        <path class="cls-6" fill="#ffffff" d="M195,206.22H165.12a9.5,9.5,0,0,1-9.54-9.42l-.25-32.23a8.06,8.06,0,0,1,8-8.12H195a9.38,9.38,0,0,1,9.4,9.42V196.8a9.38,9.38,0,0,1-9.4,9.42" transform="translate(-3.69 -3.48)"/>
+        <path class="cls-6" fill="#ffffff" d="M41.43,116.74a9.45,9.45,0,0,1,9.42-9.38H91.2v49.09l-40.35-.38a9.45,9.45,0,0,1-9.42-9.38" transform="translate(-3.69 -3.48)"/>
+    </g>
+</svg>

@@ -1,3 +1,218 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Book.eot");
+  src: url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Book.woff2") format("woff2"), url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Book.woff") format("woff"), url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Book.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Bold";
+  src: url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/GothamBold.eot");
+  src: url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/GothamBold.eot?#iefix") format("embedded-opentype"), url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/GothamBold.woff2") format("woff2"), url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/GothamBold.woff") format("woff"), url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/GothamBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Light";
+  src: url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Light.eot");
+  src: url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Light.eot?#iefix") format("embedded-opentype"), url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Light.woff2") format("woff2"), url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Light.woff") format("woff"), url("https://s3-eu-west-1.amazonaws.com/static.competitionlabs.com/fonts/Gotham-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+:root {
+  --primary-color:#ff6600;
+  --primary-color-darken: #ee6103;
+  --primary-color-lighten: #ff7010;
+  --primary-font-color:#3a3a3a;
+  --primary-background-color:#F9F9F9;
+  --light-font-color:#FFFFFF;
+  --darkest-color: #212121;
+  --light-grey: #b4b4b4;
+  --lb3-widget-icon: url(../../images/logo-icon2.png);
+  --lb3-widget-icon-2x: url(../../images/logo-icon2-x2.png);
+  --lb3-widget-font: "Gotham A", "Gotham B", "Gotham", Helvetica, Arial, serif;
+  --lb3-widget-bg-color: var(--primary-color);
+  --lb3-widget-border-color: var(--primary-color);
+  --lb3-widget-text-color: #ffffff;
+  --lb3-widget-date-text-color: #ffffff;
+  --lb3-widget-header-text-color: var(--light-grey);
+  --lb3-widget-navigation-icon-width: 73px;
+  --lb3-widget-navigation-icon-height: 73px;
+  --lb3-widget-info-icon-bg-img: url(../../images/info-icon-dark.svg);
+  --lb3-widget-image-banner-active-info-icon-bg-img: url(../../images/info-icon.svg);
+  --main-widget-image-banner-active-details-content-background: var(--primary-color);
+  --lb3-close-btn-bg-color: var(--primary-color);
+  --lb3-miniscoreboard-close-wrapper-border: 2px solid var(--primary-color);
+  --lb3-miniscoreboard-close-btn-back: var(--primary-color);
+  --lb3-miniscoreboard-close-btn-color: #fff;
+  --lb3-miniscoreboard-close-btn-font-size: 18px;
+  --lb3-miniscoreboard-opt-btn-border: 1px solid var(--primary-background-color);
+  --lb3-miniscoreboard-opt-btn-back: var(--primary-background-color);
+  --lb3-miniscoreboard-opt-btn-back-hover: var(--primary-color);
+  --lb3-miniscoreboard-opt-btn-color-hover: #ffffff;
+  --lb3-miniscoreboard-opt-btn-color: var(--primary-color);
+  --lb3-miniscoreboard-opt-line-height: 22px;
+  --lb3-miniscoreboard-opt-font-size: 14px;
+  --lb3-miniscoreboard-date-color: var(--light-grey);
+  --lb3-miniscoreboard-rank-label-color: var(--light-grey);
+  --lb3-miniscoreboard-points-label-color: var(--light-grey);
+  --lb3-miniscoreboard-inverse-first-to-date-color: var(--light-grey);
+  --lb3-miniscoreboard-inverse-first-to-date-only-color: var(--light-grey);
+  --lb3-miniscoreboard-first-to-header-rank-color: var(--light-grey);
+  --lb3-miniscoreboard-first-to-header-points-color: var(--light-grey);
+  --lb3-miniscoreboard-vertical-first-to-rank-color: var(--light-grey);
+  --lb3-miniscoreboard-vertical-first-to-points-color: var(--light-grey);
+  --lb3-miniscoreboard-first-to-date-color: var(--light-grey);
+  --lb3-tournament-icon: url(../../images/big-tournament-icon.svg);
+  --lb3-tournament-icon-bg-image: url(../../images/big-orange-btn-icon.png);
+  --lb3-tournament-icon-bg--image-2x: url(../../images/big-orange-btn-icon-2x.png);
+  --lb3-tournament-header-back: var(--primary-color);
+  --lb3-tournament-header-border-bottom: 1px solid #4c4c4c;
+  --lb3-tournament-header-label-color: var(--light-font-color);
+  --lb3-tournament-header-date-color: var(--light-font-color);
+  --lb3-tournament-header-close-back-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-tournament-header-list-back-image: url(../../cl-black-theme/images/menu.svg);
+  --lb3-tournament-details-bg-color: var(--primary-background-color);
+  --lb3-tournament-details-label-color: var(--primary-font-color);
+  --lb3-image-banner-active-tournament-details-label-color: #ffffff;
+  --lb3-tournament-footer-bg-color: var(--primary-color);
+  --lb3-tournament-footer-top-border: 1px solid #4c4c4c;
+  --lb3-tournament-footer-text-color: var(--light-font-color);
+  --lb3-tournament-container-bg-color: var(--primary-background-color);
+  --lb3-tournament-container-text-color: var(--primary-font-color);
+  --lb3-tournament-container-text-size: 12px;
+  --lb3-tournament-container-height: 28px;
+  --lb3-tournament-container-line-height: 28px;
+  --lb3-tournament-description-close-arrow-up-color: #ffffff;
+  --lb3-tournament-description-close-background: var(--primary-color);
+  --lb3-tournament-lb-first-place-back: none;
+  --lb3-tournament-lb-first-place-color: #ffe500;
+  --lb3-tournament-lb-first-place-border: 1px solid #e2d45f;
+  --lb3-tournament-lb-second-place-back: none;
+  --lb3-tournament-lb-second-place-color: #d4d4d4;
+  --lb3-tournament-lb-second-place-border: 1px solid #c8c8c8;
+  --lb3-tournament-lb-third-place-back: none;
+  --lb3-tournament-lb-third-place-color: #ffa800;
+  --lb3-tournament-lb-third-place-border: 1px solid #e2b662;
+  --lb3-tournament-header-text-color: var(--primary-font-color);
+  --lb3-tournament-header-text-size: 11px;
+  --lb3-tournament-top-results-text-color: var(--primary-font-color);
+  --lb3-tournament-top-results-bg-color: #E4E3D6;
+  --lb3-tournament-top-results-bg-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
+  --lb3-tournament-details-container-bg-color: var(--primary-background-color);
+  --lb3-tournament-details-header-color: #e4bc1f;
+  --lb3-tournament-details-date-color: var(--primary-font-color);
+  --lb3-tournament-details-body-color: var(--primary-font-color);
+  --lb3-tournament-details-link-color: #2c9ab7;
+  --lb3-tournament-list-bg-color: var(--primary-background-color);
+  --lb3-tournament-details-opt-in-back: var(--primary-background-color);
+  --lb3-tournament-details-opt-in-back-border-top: 1px solid var(--light-grey);
+  --lb3-tournament-details-opt-in-btn-back: var(--primary-background-color);
+  --lb3-tournament-details-opt-in-btn-back-hover: var(--primary-color);
+  --lb3-tournament-details-opt-in-btn-color-hover: #ffffff;
+  --lb3-tournament-details-opt-in-btn-border-hover: 1px solid var(--primary-color);
+  --lb3-tournament-details-opt-in-color: var(--primary-font-color);
+  --lb3-tournament-details-opt-in-border: 1px solid var(--primary-font-color);
+  --lb3-tournament-list-accordion-label-back: var(--primary-color-darken);
+  --lb3-tournament-list-accordion-label-icon: var(--light-font-color);
+  --lb3-tournament-list-accordion-label-icon-show: var(--primary-color);
+  --lb3-tournament-list-accordion-label-back-show: #f2f2f2;
+  --lb3-tournament-list-accordion-label-back-hover: var(--primary-color-lighten);
+  --lb3-tournament-list-accordion-label-color-show: var(--primary-color);
+  --lb3-tournament-list-item-cont-border-bottom: 1px solid var(--light-grey);
+  --lb3-tournament-list-item-cont-back-hover: #e5e2d5;
+  --lb3-tournament-lb-active-member-row-height: 28px;
+  --lb3-tournament-lb-active-member-row-back: #E4E3D6;
+  --lb3-tournament-lb-active-member-row-color: var(--primary-color);
+  --lb3-tournament-lb-opt-in-back: var(--primary-background-color);
+  --lb3-tournament-lb-opt-in-btn-back: var(--primary-background-color);
+  --lb3-tournament-lb-opt-in-btn-color: var(--primary-font-color);
+  --lb3-tournament-lb-opt-in-border: 1px solid var(--primary-font-color);
+  --lb3-tournament-lb-opt-in-btn-back-hover: var(--primary-color);
+  --lb3-tournament-lb-opt-in-btn-color-hover: #fff;
+  --lb3-tournament-lb-opt-in-btn-border-hover: 1px solid var(--primary-color);
+  --lb3-achievements-icon: url(../../images/big-challenge-icon.svg);
+  --lb3-achievements-icon-bg-image: url(../../images/big-orange-btn-icon.png);
+  --lb3-achievements-icon-bg--image-2x: url(../../images/big-orange-btn-icon-2x.png);
+  --lb3-achievements-header-bg-color: var(--primary-color);
+  --lb3-achievements-header-label-color: var(--light-font-color);
+  --lb3-achievements-header-date-color: var(--light-grey);
+  --lb3-achievements-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-achievements-header-border-bottom: 1px solid #4c4c4c;
+  --lb3-achievements-details-bg-color: var(--primary-background-color);
+  --lb3-achievements-container-bg-color: var(--primary-background-color);
+  --lb3-achievements-details-header-text-color: var(--primary-font-color);
+  --lb3-achievements-details-date-color: var(--primary-font-color);
+  --lb3-achievements-details-body-color: var(--primary-font-color);
+  --lb3-achievements-details-link-color: #2c9ab7;
+  --lb3-achievements-footer-bg-color: var(--primary-color);
+  --lb3-achievements-footer-top-border: 1px solid #4c4c4c;
+  --lb3-achievements-footer-text-color: var(--light-font-color);
+  --lb3-achievements-divider-color: #e5e2d5;
+  --lb3-achievements-item-label-color: var(--primary-font-color);
+  --lb3-achievements-item-body-color: var(--primary-font-color);
+  --lb3-achievements-progress-bg-color: var(--primary-color);
+  --lb3-achievements-progress-fill-color: #fff;
+  --lb3-achievements-progress-text-color: var(--primary-color);
+  --lb3-achievements-progress-border: 1px solid var(--primary-color);
+  --lb3-achievements-btn-bg-color: var(--primary-color);
+  --lb3-achievements-btn-hover-color: var(--primary-color-lighten);
+  --lb3-achievements-btn-border-radius: 3px;
+  --lb3-achievements-btn-box-shadow: 1px 3px 4px rgba(0,0,0,0.2);
+  --lb3-achievements-btn-border: none;
+  --lb3-rewards-icon: url(../../images/big-reward-icon.svg);
+  --lb3-rewards-icon-bg-image: url(../../images/big-orange-btn-icon.png);
+  --lb3-rewards-icon-bg--image-2x: url(../../images/big-orange-btn-icon-2x.png);
+  --lb3-rewards-header-bg-color: var(--primary-color);
+  --lb3-rewards-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-rewards-header-border-bottom: 1px solid #4c4c4c;
+  --lb3-rewards-footer-bg-color: var(--primary-color);
+  --lb3-rewards-footer-top-border: 1px solid #4c4c4c;
+  --lb3-rewards-footer-text-color: var(--light-font-color);
+  --lb3-rewards-bg-color: var(--primary-background-color);
+  --lb3-rewards-divider-color: #e5e2d5;
+  --lb3-rewards-item-label-color: var(--primary-font-color);
+  --lb3-rewards-item-body-color: var(--primary-font-color);
+  --lb3-rewards-item-bg-color-hover: #e5e2d5;
+  --lb3-rewards-accordion-bg-color: var(--primary-color-darken);
+  --lb3-rewards-accordion-hover-color: var(--primary-color-lighten);
+  --lb3-rewards-details-bg-color: var(--primary-background-color);
+  --lb3-rewards-details-title-color: var(--primary-font-color);
+  --lb3-rewards-details-date-color: var(--primary-font-color);
+  --lb3-rewards-details-body-color: var(--primary-font-color);
+  --lb3-rewards-details-reward-bg-color: #173135;
+  --lb3-rewards-winnings-bg-color: var(--primary-color);
+  --lb3-rewards-btn-bg-color: var(--primary-color);
+  --lb3-rewards-btn-border: none;
+  --lb3-rewards-btn-hover-color: var(--primary-color-lighten);
+  --lb3-rewards-btn-border-radius: 3px;
+  --lb3-rewards-btn-box-shadow: 1px 3px 4px rgba(0,0,0,0.2);
+  --lb3-rewards-accordion-container-show-bg-color: #f2f2f2;
+  --lb3-rewards-accordion-container-show-color: var(--primary-color);
+  --lb3-messages-icon: url(../../images/big-message-icon.svg);
+  --lb3-messages-icon-bg-image: url(../../images/big-orange-btn-icon.png);
+  --lb3-messages-icon-bg--image-2x: url(../../images/big-orange-btn-icon-2x.png);
+  --lb3-messages-header-bg-color: var(--primary-color);
+  --lb3-messages-header-text-color: #fff;
+  --lb3-messages-header-date-color: var(--primary-font-color);
+  --lb3-messages-header-close-image: url(../../cl-black-theme/images/close-icon.svg);
+  --lb3-messages-header-border-bottom: 1px solid #4c4c4c;
+  --lb3-messages-item-bg-color: var(--primary-background-color);
+  --lb3-messages-item-hover-color: #e5e2d5;
+  --lb3-messages-item-divider-color: #e5e2d5;
+  --lb3-messages-item-label-color: var(--primary-font-color);
+  --lb3-messages-item-text-color: var(--primary-font-color);
+  --lb3-messages-details-bg-color: var(--primary-background-color);
+  --lb3-messages-details-title-color: var(--primary-font-color);
+  --lb3-messages-details-date-color: var(--primary-font-color);
+  --lb3-messages-details-text-color: var(--primary-font-color);
+  --lb3-messages-footer-bg-color: var(--primary-color);
+  --lb3-messages-footer-text-color: var(--light-font-color);
+  --lb3-messages-footer-top-border: 1px solid #4c4c4c;
+  --lb3-notification-back-image: url(../../images/big-blue-btn-icon2.png);
+  --prev-btn-icon-bg: url(../../images/prev-btn-icon-orange.svg);
+}
+
 .cl-widget-ms-wrapper, .cl-widget-notif-wrapper {
   float: left;
   width: 100%;
@@ -77,7 +292,7 @@
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
   -ms-filter: blur(0px);
-  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius="0");
 }
 
 .cl-widget-ms-wrapper .cl-widget-ms-information-top-wrapper {
@@ -119,7 +334,6 @@
   top: -10px;
   right: -10px;
   z-index: 1;
-
   background: var(--lb3-close-btn-bg-color);
   width: 30px;
   height: 30px;
@@ -141,7 +355,6 @@
   line-height: 14px;
   font-size: var(--lb3-miniscoreboard-close-btn-font-size);
 }
-
 
 /**
  * Mini Score Board - Opt-in layout
@@ -200,7 +413,6 @@
   background: var(--lb3-miniscoreboard-opt-btn-back-hover);
   color: var(--lb3-miniscoreboard-opt-btn-color-hover);
 }
-
 
 /**
  * Mini score board default
@@ -414,7 +626,6 @@
 .cl-widget-ms-wrapper.cl-vertical-mini .cl-widget-ms-information-top-wrapper .cl-widget-ms-default-wrapper .cl-mem-points {
   font-size: 14px;
 }
-
 
 /**
  * Mini score board first to
@@ -637,7 +848,6 @@
   font-size: 14px;
 }
 
-
 /**
  * Mini Score Board - Sum of Best layout
  */
@@ -719,7 +929,6 @@
   float: left;
   width: 100%;
   padding: 0 5px 0 0;
-
   line-height: 12px;
 }
 
@@ -729,12 +938,10 @@
   text-align: center;
 }
 
-
 .cl-widget-ms-wrapper .cl-widget-ms-sum-best-wrapper .cl-widget-ms-sum-best-rank-value {
   text-align: center;
   position: relative;
   z-index: 1;
-  // padding: 0 0 0 14px;
 }
 
 .cl-widget-ms-wrapper .cl-widget-ms-sum-best-wrapper .cl-widget-ms-sum-best-rank-value.cl-ms-rank-up::before {
@@ -764,7 +971,6 @@
   left: 0;
   top: 0;
 }
-
 
 /**
  * Mini score board vertical
@@ -953,7 +1159,6 @@
   padding: 5px 0;
 }
 
-
 /**
  * Main Section area
  */
@@ -1002,8 +1207,9 @@
   left: 0;
   top: 0;
 }
+
 .cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-navigation-container {
-  display:none;
+  display: none;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-items {
@@ -1124,7 +1330,6 @@
   opacity: 1;
 }
 
-
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb.cl-active-nav:hover {
   width: 92px;
   height: 92px;
@@ -1169,10 +1374,9 @@
   opacity: 1;
 }
 
-.cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-items .cl-hidden-navigation-item{
+.cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-items .cl-hidden-navigation-item {
   display: none;
 }
-
 
 .cl-main-widget-wrapper .cl-main-widget-section-container {
   position: relative;
@@ -1183,6 +1387,7 @@
   top: 0;
   padding: 0 0 0 73px;
 }
+
 .cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-section-container {
   padding: 0 0 0 0;
 }
@@ -1276,16 +1481,13 @@
   z-index: 2;
 }
 
-// .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-info {
-
-// }
-
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content {
   float: left;
   width: 100%;
   text-align: center;
   padding: 10px 0 0 0;
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-details-content {
   background-color: var(--main-widget-image-banner-active-details-content-background);
 }
@@ -1293,14 +1495,11 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-image-container .cl-main-widget-lb-details-image {
   float: left;
   width: 100%;
-  padding:0;
-  margin:0;
-  border:none;
-  max-height:120px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  max-height: 120px;
 }
-
-
-
 
 /****************************************************************
 	 ******* Embedded description styling and layout changes ********
@@ -1311,55 +1510,64 @@
   max-height: 200px;
   text-align: center;
 }
+
 .cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image {
   max-height: 200px;
   width: auto;
 }
-@media screen and (min-width:1040px){
+
+@media screen and (min-width: 1040px) {
   .cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image {
     width: 100%;
     height: auto;
   }
 }
-
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-description-container {
   float: left;
   width: 100%;
-  padding:10px;
-  display:none;
+  padding: 10px;
+  display: none;
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-leaderboard {
   top: 200px;
   height: calc(100% - 200px);
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-section-image-banner-active .cl-main-widget-lb-details-description-container {
   height: calc(100% - 189px);
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-container {
   display: block;
   position: relative;
   height: calc(100% - 70px);
   overflow: hidden;
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description {
-  float:left;
-  width:100%;
-  height:100%;
-  max-height:100%;
+  float: left;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
   overflow: auto;
   font-size: 12px;
 }
-.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description a{
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description a {
   color: var(--primary-font-color);
 }
-.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description p{
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description p {
   margin-bottom: 1em;
 }
-.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description img{
-  max-width:100%;
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description img {
+  max-width: 100%;
   margin-bottom: 1em;
 }
-.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close{
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close {
   float: left;
   width: 100%;
   height: 25px;
@@ -1369,6 +1577,7 @@
   left: 0;
   cursor: pointer;
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close::before {
   content: "";
   display: block;
@@ -1382,25 +1591,26 @@
   border-bottom: transparent;
   transform: translate(-50%) rotate(45deg);
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details {
-  height:calc(100% - 51px);
+  height: calc(100% - 51px);
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-leaderboard {
-  display:none;
+  display: none;
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-missing-member {
-  display:block !important;
+  display: block !important;
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description *:last-child {
   margin-bottom: 30px;
 }
+
 /********************************************************************
  ***************************** END **********************************
  *******************************************************************/
-
-
-
-
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content-label {
   text-align: center;
   padding: 0 40px;
@@ -1430,16 +1640,14 @@
   top: 1px;
   cursor: pointer;
 }
-.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active  .cl-main-widget-lb-details-content-label{
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-details-content-label {
   color: var(--lb3-image-banner-active-tournament-details-label-color);
 }
-.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-details-content-label::before{
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-details-content-label::before {
   background-image: var(--lb3-widget-image-banner-active-info-icon-bg-img);
 }
-
-// .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-info-icon {
-
-// }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-footer {
   float: left;
@@ -1467,7 +1675,8 @@
   color: var(--lb3-tournament-lb-active-member-row-color);
   padding: 0 30px;
 }
-.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-missing-member .cl-col{
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-missing-member .cl-col {
   color: var(--lb3-tournament-lb-active-member-row-color);
 }
 
@@ -1491,7 +1700,8 @@
   background: var(--lb3-tournament-container-bg-color);
   border-radius: 5px;
 }
-.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-leaderboard{
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-leaderboard {
   padding: 2px 0 22px 0;
 }
 
@@ -1562,8 +1772,7 @@
   border-radius: 0 0 5px 5px;
 }
 
-
-.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-header-top-res .cl-col{
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-header-top-res .cl-col {
   color: var(--lb3-tournament-top-results-text-color);
 }
 
@@ -1590,8 +1799,9 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-rank-col {
   width: 9%;
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body .cl-rank-col {
-  padding:0 0 0 3px;
+  padding: 0 0 0 3px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-rank-col .cl-rank-col-value {
@@ -1684,13 +1894,13 @@
   width: 12%;
 }
 
-
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard .cl-lb-row {
   float: left;
   width: 100%;
 }
+
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard .cl-main-widget-lb-leaderboard-header-top-res .cl-lb-row {
-  padding:0 0 2px 0;
+  padding: 0 0 2px 0;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard .cl-lb-member-row {
@@ -1700,7 +1910,7 @@
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard .cl-lb-member-row .cl-col {
-  color:var(--lb3-tournament-lb-active-member-row-color);
+  color: var(--lb3-tournament-lb-active-member-row-color);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard .cl-lb-member-row .cl-name-col,
@@ -1747,7 +1957,7 @@
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-growth-up {
   display: none;
-  background-image: url(../../images/growth-arrow-icon.svg)  ;
+  background-image: url(../../images/growth-arrow-icon.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 100%;
@@ -1908,7 +2118,8 @@
   border-radius: 5px;
   transition: all 0.2s ease;
 }
-.cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-pre-loader{
+
+.cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-pre-loader {
   width: 100%;
 }
 
@@ -1961,7 +2172,6 @@
     height: 32px;
   }
 }
-
 /**
  * Competition list
  */
@@ -2011,7 +2221,6 @@
   z-index: 1;
 }
 
-
 /**
  * ***** Body table reset styles START *****
  */
@@ -2051,7 +2260,6 @@
 }
 
 /******** Body table reset styles END *******/
-
 /**
  * ***** Body list reset styles START ******
  */
@@ -2078,8 +2286,6 @@
 }
 
 /********Body list reset styles END *******/
-
-
 .cl-main-widget-wrapper .cl-main-widget-lb-details-container .cl-main-widget-lb-details-optin-container {
   float: left;
   width: 100%;
@@ -2164,7 +2370,6 @@
   color: var(--lb3-tournament-lb-opt-in-btn-color-hover);
   border: var(--lb3-tournament-lb-opt-in-btn-border-hover);
 }
-
 
 /**
  * ****************************************
@@ -2397,7 +2602,6 @@
   max-width: 100%;
 }
 
-
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-footer {
   float: left;
   width: 100%;
@@ -2549,7 +2753,6 @@
   width: 100%;
   max-height: 50px;
 }
-
 
 /**
  * ****************************************
@@ -2794,7 +2997,6 @@
   display: block;
 }
 
-
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-tournaments-list .cl-main-accordion-container .cl-accordion-label {
   background: var(--lb3-tournament-list-accordion-label-back);
 }
@@ -2844,7 +3046,6 @@
   line-height: 16px;
   color: var(--primary-font-color);
 }
-
 
 .cl-main-widget-wrapper .cl-main-widget-reward-details-container {
   position: absolute;
@@ -3017,7 +3218,6 @@
   cursor: not-allowed;
   pointer-events: none;
 }
-
 
 /**
  * ****************************************
@@ -3248,7 +3448,6 @@
   padding: 0 0 30px 0;
 }
 
-
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-footer {
   float: left;
   width: 100%;
@@ -3271,13 +3470,11 @@
   text-align: center;
 }
 
-
 /**
  * ******************************************
  * ********** Navigation controls ***********
  * ******************************************
  */
-
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-item {
   transition: all 0.3s ease;
   opacity: 0;
@@ -3288,7 +3485,6 @@
   opacity: 1;
   left: 0;
 }
-
 
 /**
  * ******************************************
@@ -3319,12 +3515,11 @@
   width: 80px;
   height: 80px;
   background-size: 78px 79px;
-
   filter: none;
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
   -ms-filter: blur(0px);
-  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius="0");
 }
 
 .cl-widget-notif-wrapper .cl-widget-notif-icon-wrapper .cl-widget-notif-icon::after {
@@ -3376,7 +3571,6 @@
   top: -10px;
   right: -10px;
   z-index: 1;
-
   background: var(--darkest-color);
   width: 30px;
   height: 30px;
@@ -3429,7 +3623,6 @@
   line-height: 16px;
 }
 
-
 /**
  * *************************************
  * ********** Mobile Devices ***********
@@ -3446,245 +3639,265 @@
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-name-col {
     max-width: 200px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-growth-col {
     max-width: 55px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-points-col {
     max-width: 220px;
   }
 }
-
 @media (max-width: 812px) {
   .cl-main-widget-wrapper {
     padding: 5px 12px 10px 12px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container {
     width: 91%;
     height: 88px;
     left: 25px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-items {
     padding: 0;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb {
     float: left;
     margin: 0px -5px 0 -3px;
     width: 76px;
     height: 76px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb.cl-active-nav:hover {
     margin: 0 -6px 0 -3px;
     width: 88px;
     height: 88px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach {
     float: left;
     margin: 0px -5px 0 1px;
     width: 76px;
     height: 76px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach.cl-active-nav:hover {
     margin: 0 -6px 0 -3px;
     width: 88px;
     height: 88px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards {
     float: left;
     margin: 0px -5px 0 1px;
     width: 76px;
     height: 76px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards.cl-active-nav:hover {
     margin: 0 -6px 0 -3px;
     width: 88px;
     height: 88px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox {
     float: left;
     margin: 0px -5px 0 1px;
     width: 76px;
     height: 76px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox.cl-active-nav:hover {
     margin: 0 -6px 0 -3px;
     width: 88px;
     height: 88px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container {
     padding: 82px 0 0 0;
   }
+
   .cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-section-container {
     padding: 0 0 0 0;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-pre-loader {
     opacity: 1;
     top: 81px;
     height: calc(100% - 80px);
     width: 100%;
   }
-  .cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-pre-loader{
+
+  .cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-pre-loader {
     height: 100%;
     width: 100%;
-    top:0;
+    top: 0;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header {
     height: 42px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
     width: 35px;
     height: 35px;
     margin: 3px 0 0 10px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
     line-height: 42px;
     font-size: 14px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-label {
     line-height: 42px;
     font-size: 16px;
     display: none;
   }
+
   .cl-widget-ms-wrapper .cl-main-widget-lb-header-date .time-ind {
     font-size: 7px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard {
     padding: 84px 0 22px 0;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-lb-details-container {
     height: calc(100% - 64px);
     top: 42px;
   }
 }
-
 @media (max-height: 520px) and (max-width: 812px) {
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header {
     height: 34px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
     width: 31px;
     height: 31px;
     margin: 3px 0 0 10px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
     line-height: 34px;
     font-size: 13px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details {
     height: 38px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content {
     padding: 2px 0 0 0;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard {
     padding: 70px 0 22px 0;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-pre-loader {
     top: 61px;
     height: calc(100% - 60px);
   }
-  .cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-pre-loader{
+
+  .cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-pre-loader {
     height: 100%;
     width: 100%;
-    top:0;
+    top: 0;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container {
     height: 66px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb {
     float: left;
     margin: 0px -5px 0 -3px;
     width: 58px;
     height: 58px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb.cl-active-nav:hover {
     margin: 0 -6px 0 1px;
     width: 68px;
     height: 68px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach {
     float: left;
     margin: 0px -5px 0 3px;
     width: 58px;
     height: 58px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach.cl-active-nav:hover {
     margin: 0 -6px 0 1px;
     width: 68px;
     height: 68px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards {
     float: left;
     margin: 0px -5px 0 3px;
     width: 58px;
     height: 58px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards.cl-active-nav:hover {
     margin: 0 -6px 0 1px;
     width: 68px;
     height: 68px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox {
     float: left;
     margin: 0px -5px 0 3px;
     width: 58px;
     height: 58px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox.cl-active-nav:hover {
     margin: 0 -6px 0 -3px;
     width: 68px;
     height: 68px;
   }
+
   .cl-main-widget-wrapper .cl-main-widget-section-container {
     padding: 60px 0 0 0;
   }
+
   .cl-main-widget-wrapper .cl-hidden-navigation .cl-main-widget-section-container {
     padding: 0 0 0 0;
   }
 }
-
 /**
  * for retina resolution
  */
-@media only screen and (min--moz-device-pixel-ratio: 2),
-only screen and (-o-min-device-pixel-ratio: 2/1),
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min-device-pixel-ratio: 2) {
-
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   .cl-widget-ms-wrapper .cl-widget-ms-icon-wrapper .cl-widget-ms-icon {
     background-image: var(--lb3-widget-icon-2x);
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach {
     background-image: var(--lb3-achievements-icon-bg-image-2x);
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb {
     background-image: var(--lb3-tournament-icon-bg-image-2x);
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards {
     background-image: var(--lb3-rewards-icon-bg-image-2x);
   }
+
   .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox {
     background-image: var(--lb3-messages-icon-bg-image-2x);
   }
+
   .cl-widget-notif-wrapper .cl-widget-notif-icon-wrapper .cl-widget-notif-icon {
     background-image: var(--lb3-achievements-icon-bg-image-2x);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

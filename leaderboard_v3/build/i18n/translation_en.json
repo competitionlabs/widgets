@@ -1,0 +1,55 @@
+{
+  "time": {
+    "days": "d",
+    "hours": "h",
+    "minutesShortHand": "min",
+    "minutes": "m",
+    "seconds": "s"
+  },
+  "achievements": {
+    "label": "Achievements",
+    "more": "More",
+    "complete": "complete 100%"
+  },
+  "tournaments": {
+    "label": "Tournaments",
+    "enter": "Enter Tournament",
+    "readyCompetitions": "Upcoming Tournaments",
+    "activeCompetitions": "Active Tournaments",
+    "finishedCompetitions": "Finished Tournaments",
+    "finishing": "Finishing",
+    "finished": "Finished",
+    "registered": "Registered",
+    "noAvailableCompetitions": "No available competition"
+  },
+  "leaderboard": {
+    "rank": "Rank",
+    "name": "Name",
+    "points": "Points",
+    "prize": "Prize",
+    "you": "You"
+  },
+  "miniLeaderboard": {
+    "highScore": "High Score",
+    "lastScore": "Last Score",
+    "rank": "Rank",
+    "startsIn": "Starting In",
+    "starting": "starting",
+    "finishing": "finishing",
+    "finished": "finished"
+  },
+  "rewards": {
+    "label": "Rewards",
+    "claim": "Claim Now",
+    "claimed": "Claimed",
+    "availableRewards": "Available Rewards",
+    "rewards": "Claimed Rewards",
+    "expiredRewards": "Expired Rewards"
+  },
+  "messages": {
+    "label": "Messages"
+  },
+  "global": {
+    "copy": "Powered By CompetitionLabs"
+  }
+}
