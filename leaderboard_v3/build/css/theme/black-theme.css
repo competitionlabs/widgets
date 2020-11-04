@@ -96,6 +96,7 @@
   --lb3-tournament-lb-third-place-border: 1px solid #e2b662;
   --lb3-tournament-header-text-color: var(--primary-font-color);
   --lb3-tournament-header-text-size: 11px;
+  --lb3-tournament-top-results-text-color: var(--primary-font-color);
   --lb3-tournament-top-results-bg-color: #E4E3D6;
   --lb3-tournament-top-results-bg-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
   --lb3-tournament-details-container-bg-color: var(--primary-background-color);
@@ -1771,10 +1772,8 @@
   border-radius: 0 0 5px 5px;
 }
 
-.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-header-top-res {
-  float: left;
-  width: 100%;
-  padding: 0 30px;
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-header-top-res .cl-col {
+  color: var(--lb3-tournament-top-results-text-color);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body {

@@ -24,12 +24,14 @@
   --lb3-widget-navigation-icon-width: 73px;
   --lb3-widget-navigation-icon-height: 73px;
 
+  --lb3-widget-image-banner-active-info-icon-bg-img: url(../../images/info-icon.svg);
+
   // CLOSE BTN
   --lb3-close-btn-bg-color: #000000;
 
   // MINI SCOREBOARD
   --lb3-miniscoreboard-close-wrapper-border: 2px solid #252525;
-  --lb3-miniscoreboard-close-btn-back: none;
+  --lb3-miniscoreboard-close-btn-back: #252525;
   --lb3-miniscoreboard-close-btn-color: #ffffff;
   --lb3-miniscoreboard-close-btn-font-size: 18px;
 
@@ -95,6 +97,7 @@
   --lb3-tournament-top-results-bg-box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.2);
   --lb3-tournament-details-container-bg-color: #000000;
   --lb3-tournament-details-header-color: #e4bc1f;
+  --lb3-image-banner-active-tournament-details-label-color: #e4bc1f;
   --lb3-tournament-details-date-color: #ffffff;
   --lb3-tournament-details-body-color: #ffffff;
   --lb3-tournament-details-link-color: #2c9ab7;
@@ -125,6 +128,8 @@
   --lb3-tournament-lb-opt-in-btn-color: #ffffff;
   --lb3-tournament-lb-opt-in-btn-back-hover: #292929;
   --lb3-tournament-lb-opt-in-border: 1px solid #ffffff;
+
+  --lb3-tournament-top-results-text-color: #ffffff;
 
   // ACHIEVEMENTS
   --lb3-achievements-icon: url(../../images/big-challenge-icon.svg);
