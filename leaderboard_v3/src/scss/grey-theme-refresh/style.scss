@@ -12,6 +12,10 @@
   padding: 0.5em 0;
 }
 
+.cl-widget-ms-wrapper .cl-widget-ms-optin-wrapper .cl-widget-ms-optin-action:hover{
+  border: 1px solid var(--lb3-miniscoreboard-opt-btn-back-hover);
+}
+
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-items {
   width: 100%;
   display: flex;
@@ -280,6 +284,7 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-leaderboard {
   top: 200px;
   height: calc(100% - 200px);
+  padding-top: 72px;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-section-image-banner-active .cl-main-widget-lb-details-description-container {
   height: calc(100% - 265px);
