@@ -65,7 +65,7 @@
   // TOURNAMENTS
   --lb3-tournament-icon: url(../../images/big-tournament-icon.svg);
   --lb3-tournament-header-back: var(--primary-color-darken);
-  --lb3-tournament-header-border-bottom: 1px solid #4c4c4c;
+  --lb3-tournament-header-border-bottom: 0px;
   --lb3-tournament-header-label-color: var(--light-font-color);
   --lb3-tournament-header-date-color: var(--light-font-color);
   --lb3-tournament-header-close-back-image: url(../../images/close-icon-grey.svg);
@@ -78,7 +78,7 @@
   --lb3-tournament-footer-text-color: var(--light-font-color);
   --lb3-tournament-container-bg-color: var(--primary-background-color);
   --lb3-tournament-container-text-color: var(--primary-font-color);
-  --lb3-tournament-container-text-size: 12px;
+  --lb3-tournament-container-text-size: 14px;
   --lb3-tournament-container-height: 28px;
   --lb3-tournament-container-line-height: 28px;
 
@@ -96,8 +96,8 @@
   --lb3-tournament-lb-third-place-color: #ffa800;
   --lb3-tournament-lb-third-place-border: 1px solid #e2b662;
 
-  --lb3-tournament-header-text-color: var(--light-grey);
-  --lb3-tournament-header-text-size: 11px;
+  --lb3-tournament-header-text-color: #E0E0E0;
+  --lb3-tournament-header-text-size: 14px;
   --lb3-image-banner-active-tournament-details-label-color: var(--primary-font-color);
   --lb3-widget-image-banner-active-info-icon-bg-img: url(../../images/info-icon.svg);
 
@@ -109,6 +109,7 @@
   --lb3-tournament-details-body-color: var(--primary-font-color);
   --lb3-tournament-details-link-color: #2c9ab7;
   --lb3-tournament-list-bg-color: var(--primary-background-color);
+  --lb3-tournament-list-bg-icon:  url(../../images/info-icon.svg);
 
   --lb3-tournament-details-opt-in-back: var(--primary-background-color);
   --lb3-tournament-details-opt-in-back-border-top: 1px solid var(--light-grey);

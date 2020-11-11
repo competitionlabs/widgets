@@ -35,7 +35,7 @@
   background-size: unset;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb-icon {
-  background-size: 26px;
+  background-size: contain;
   opacity: 1;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach {
@@ -48,7 +48,7 @@
   background-size: unset;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach-icon {
-  background-size: 26px;
+  background-size: contain;
   opacity: 1;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards {
@@ -61,7 +61,7 @@
   background-size: unset;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards-icon {
-  background-size: 26px;
+  background-size: contain;
   opacity: 1;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox {
@@ -74,7 +74,7 @@
   background-size: unset;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox-icon {
-  background-size: 26px;
+  background-size: contain;
   opacity: 1;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb.cl-active-nav:hover {
@@ -85,6 +85,7 @@
   transition: all 0.3s;
   height: 47px;
   width: var(--lb3-widget-navigation-icon-width);
+  padding: 5px;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards.cl-active-nav:hover {
   width: var(--lb3-widget-navigation-icon-width);
@@ -94,6 +95,7 @@
   border-radius: 4px;
   transition: all 0.3s;
   height: 47px;
+  padding: 5px;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox.cl-active-nav:hover {
   width: var(--lb3-widget-navigation-icon-width);
@@ -103,6 +105,7 @@
   border-radius: 4px;
   transition: all 0.3s;
   height: 47px;
+  padding: 5px;
 }
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach.cl-active-nav:hover {
   width: var(--lb3-widget-navigation-icon-width);
@@ -112,6 +115,7 @@
   border-radius: 4px;
   transition: all 0.3s;
   height: 47px;
+  padding: 5px;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container {
   padding:0;
@@ -121,8 +125,9 @@
   overflow: unset;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
-  opacity: 0.5;
+  opacity: 0.849;
   transition: opacity 0.3s;
+  height: 40px;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon:hover{
   opacity: 1;
@@ -132,27 +137,37 @@
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-close {
   background-size: 100%;
-  right: -10px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content {
   padding: 5px 0 0 0;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-image-container .cl-main-widget-lb-details-image {
-  float: unset;
-  width: unset;
-  padding:unset;
-  margin:unset;
-  border:unset;
-  max-height:unset;
+	float: unset;
+	padding: unset;
+	margin: unset;
+	border: unset;
+	max-height: unset;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	object-position: center center;
 }
-
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content-label::before {
   background-image: url(../../images/info-icon.svg);
   background-size: 100%;
 }
-
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard{
+  padding: 82px 0 22px 0;
+}
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body {
   height: calc(100% - 110px);
+  scrollbar-width: none;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body::-webkit-scrollbar {
+  width: 0;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body .cl-lb-row:last-child {
   margin-bottom: 35px;
@@ -167,13 +182,25 @@
   width: 100%;
   height: calc(100% - 70px);
 }
-
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body-res{
+  padding: 0 10px;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-missing-member{
+  padding: 0 10px;
+  border-radius: 4px;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard .cl-lb-member-row {
+	box-shadow: -4px 2px 4px 2px rgba(0,0,0,0.25), 640px 2px 4px 2px rgba(0,0,0,0.25);
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description :last-child{
+  margin-bottom: 50px;
+}
 /**
  * Competition list
  */
 .cl-main-widget-tournaments-list {
-  height: calc(100% - 50px);
-  top: 30px;
+  height: calc(100% - 60px);
+  top: 40px;
 }
 
 /**
@@ -210,6 +237,8 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-header .cl-main-widget-ach-header-close {
   background-size: 100%;
   right: -15px;
+  width: 40px;
+  height: 40px;
 }
 .cl-main-widget-wrapper .cl-main-widget-ach-details-container .cl-main-widget-ach-details-header-label {
   font-weight: 600;
@@ -226,9 +255,16 @@
   background-size: 100%;
   right: -15px;
   border-bottom: unset;
+  width: 40px;
+  height: 40px;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-reward-list {
   overflow: hidden;
+  padding-top: 40px;
+}
+.cl-main-widget-wrapper .cl-main-widget-reward-details-container{
+  top: 40px;
+  height: calc(100% - 62px);
 }
 .cl-main-widget-wrapper .cl-main-widget-reward-details-container .cl-main-widget-reward-details-header-label {
   font-weight: 600;
@@ -247,12 +283,50 @@
   background-size: 100%;
   right: -15px;
   border-bottom: unset;
+  width: 40px;
+  height: 40px;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-list {
   overflow: hidden;
+  padding-top: 40px;
+}
+.cl-main-widget-wrapper .cl-main-widget-inbox-details-container {
+	top: 40px;
 }
 .cl-main-widget-wrapper .cl-main-widget-inbox-details-container .cl-main-widget-inbox-details-header-label {
   font-weight: 600;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-list{
+  padding-top: 40px;
+}
+.cl-main-widget-wrapper .cl-main-widget-ach-details-container{
+  top: 40px;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-list-body{
+  height: 568px;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-header-top-res{
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-header{
+  padding: 0 10px;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-lb-rank-1 .cl-rank-col-value,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-lb-rank-2 .cl-rank-col-value,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-lb-rank-3 .cl-rank-col-value{
+  height: 23px;
+  width: 23px;
+  line-height: 20px;
+}
+@media screen and (min-width:600px){
+  .cl-main-widget-wrapper .cl-main-widget-section-container .cl-rank-col,
+  .cl-main-widget-wrapper .cl-main-widget-section-container .cl-icon-col{
+    width: 5%;
+  }
+  .cl-main-widget-wrapper .cl-main-widget-section-container .cl-name-col{
+    width: 38%;
+  }
 }
 
 /****************************************************************
@@ -264,6 +338,8 @@
   max-height: 200px;
   text-align: center;
 }
+
+
 .cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image {
   max-height: 200px;
   width: auto;
@@ -286,9 +362,21 @@
   height: calc(100% - 200px);
   padding-top: 72px;
 }
-.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-section-image-banner-active .cl-main-widget-lb-details-description-container {
-  height: calc(100% - 265px);
+@media screen and (max-width:600px){
+  .cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image-container {
+    max-height: 110px;
+  }
+  .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-leaderboard {
+    top: 130px;
+    height: calc(100% - 130px);
+  }
 }
+@media screen and (min-width:601px){
+  .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-section-image-banner-active .cl-main-widget-lb-details-description-container {
+    height: calc(100% - 265px);
+  }
+}
+
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-container {
   display: block;
   position: relative;
@@ -318,10 +406,10 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close{
   float: left;
   width: 100%;
-  height: 25px;
-  background: var(--primary-color-darken);
+  height: 50px;
+  background: var(--primary-background-color);
   position: absolute;
-  bottom: 8px;
+  bottom: 0;
   left: 0;
   cursor: pointer;
 }
@@ -330,7 +418,7 @@
   display: block;
   position: absolute;
   left: 50%;
-  top: calc(50% - 2px);
+  top: 13px;
   width: 12px;
   height: 12px;
   border: 2px solid var(--primary-font-color);
@@ -342,14 +430,59 @@
   height:calc(100% - 51px);
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-leaderboard {
-  display:none;
+  display: none;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-missing-member {
   display:block !important;
+  width: calc(100% - 20px);
+  position: relative;
+  left: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.25);
+  bottom: 43px;
 }
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description *:last-child {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date{
+  display: none;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-tournaments-list .cl-tour-list-details-cont .cl-tour-list-details-wrap {
+	padding-left: 45px;
+	position: relative;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-tournaments-list .cl-tour-list-details-cont .cl-tour-list-details-wrap::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 0;
+	left: 0;
+  width: 30px;
+	height: 40px;
+  background: var(--lb3-tournament-list-bg-icon) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* Tab heights */
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-label,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-header .cl-main-widget-ach-header-label,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-reward-header .cl-main-widget-reward-header-label,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-header .cl-main-widget-inbox-header-label{
+  line-height: 40px;
+}
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-header,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-reward-header,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-header{
+  height: 40px;
+}
+.cl-main-widget-wrapper .cl-main-widget-lb-details-container {
+	height: calc(100% - 62px);
+	top: 40px;
+}
+
+
 /********************************************************************
  ***************************** END **********************************
  *******************************************************************/
@@ -401,19 +534,19 @@
   }
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
     width: 30px;
-    height: 30px;
+    height: 40px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header {
-    height: 32px;
+    height: 42px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
-    line-height: 32px;
+    line-height: 42px;
     font-size: 14px;
   }
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-label {
-    line-height: 32px;
+    line-height: 42px;
     font-size: 16px;
     display: none;
   }
@@ -423,25 +556,25 @@
 
   .cl-main-widget-wrapper .cl-main-widget-lb-details-container {
     height: calc(100% - 64px);
-    top: 32px;
+    top: 42px;
   }
 }
 
 @media (max-height: 520px) and (max-width: 812px) {
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header {
-    height: 30px;
+    height: 40px;
   }
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
     width: 30px;
-    height: 30px;
+    height: 40px;
     margin: 3px 0 0 10px;
   }
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
-    line-height: 30px;
+    line-height: 40px;
     font-size: 13px;
   }
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details {
-    height: 30px;
+    height: 40px;
   }
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content {
     padding: 2px 0 0 0;

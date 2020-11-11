@@ -65,7 +65,7 @@
   --lb3-miniscoreboard-first-to-date-color: var(--primary-font-color);
   --lb3-tournament-icon: url(../../images/big-tournament-icon.svg);
   --lb3-tournament-header-back: var(--primary-color-darken);
-  --lb3-tournament-header-border-bottom: 1px solid #4c4c4c;
+  --lb3-tournament-header-border-bottom: 0px;
   --lb3-tournament-header-label-color: var(--light-font-color);
   --lb3-tournament-header-date-color: var(--light-font-color);
   --lb3-tournament-header-close-back-image: url(../../images/close-icon-grey.svg);
@@ -77,7 +77,7 @@
   --lb3-tournament-footer-text-color: var(--light-font-color);
   --lb3-tournament-container-bg-color: var(--primary-background-color);
   --lb3-tournament-container-text-color: var(--primary-font-color);
-  --lb3-tournament-container-text-size: 12px;
+  --lb3-tournament-container-text-size: 14px;
   --lb3-tournament-container-height: 28px;
   --lb3-tournament-container-line-height: 28px;
   --lb3-tournament-top-results-text-color: #ffffff;
@@ -90,8 +90,8 @@
   --lb3-tournament-lb-third-place-back: none;
   --lb3-tournament-lb-third-place-color: #ffa800;
   --lb3-tournament-lb-third-place-border: 1px solid #e2b662;
-  --lb3-tournament-header-text-color: var(--light-grey);
-  --lb3-tournament-header-text-size: 11px;
+  --lb3-tournament-header-text-color: #E0E0E0;
+  --lb3-tournament-header-text-size: 14px;
   --lb3-image-banner-active-tournament-details-label-color: var(--primary-font-color);
   --lb3-widget-image-banner-active-info-icon-bg-img: url(../../images/info-icon.svg);
   --lb3-tournament-top-results-bg-color: var(--primary-color-darken);
@@ -102,6 +102,7 @@
   --lb3-tournament-details-body-color: var(--primary-font-color);
   --lb3-tournament-details-link-color: #2c9ab7;
   --lb3-tournament-list-bg-color: var(--primary-background-color);
+  --lb3-tournament-list-bg-icon: url(../../images/info-icon.svg);
   --lb3-tournament-details-opt-in-back: var(--primary-background-color);
   --lb3-tournament-details-opt-in-back-border-top: 1px solid var(--light-grey);
   --lb3-tournament-details-opt-in-btn-back: var(--primary-background-color);
@@ -3929,7 +3930,7 @@
 }
 
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-lb-icon {
-  background-size: 26px;
+  background-size: contain;
   opacity: 1;
 }
 
@@ -3944,7 +3945,7 @@
 }
 
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach-icon {
-  background-size: 26px;
+  background-size: contain;
   opacity: 1;
 }
 
@@ -3959,7 +3960,7 @@
 }
 
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards-icon {
-  background-size: 26px;
+  background-size: contain;
   opacity: 1;
 }
 
@@ -3974,7 +3975,7 @@
 }
 
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox-icon {
-  background-size: 26px;
+  background-size: contain;
   opacity: 1;
 }
 
@@ -3986,6 +3987,7 @@
   transition: all 0.3s;
   height: 47px;
   width: var(--lb3-widget-navigation-icon-width);
+  padding: 5px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-rewards.cl-active-nav:hover {
@@ -3996,6 +3998,7 @@
   border-radius: 4px;
   transition: all 0.3s;
   height: 47px;
+  padding: 5px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-inbox.cl-active-nav:hover {
@@ -4006,6 +4009,7 @@
   border-radius: 4px;
   transition: all 0.3s;
   height: 47px;
+  padding: 5px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach.cl-active-nav, .cl-main-widget-wrapper .cl-main-widget-navigation-container .cl-main-widget-navigation-ach.cl-active-nav:hover {
@@ -4016,6 +4020,7 @@
   border-radius: 4px;
   transition: all 0.3s;
   height: 47px;
+  padding: 5px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container {
@@ -4028,8 +4033,9 @@
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
-  opacity: 0.5;
+  opacity: 0.849;
   transition: opacity 0.3s;
+  height: 40px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon:hover {
@@ -4042,7 +4048,9 @@
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-close {
   background-size: 100%;
-  right: -10px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content {
@@ -4051,11 +4059,14 @@
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-image-container .cl-main-widget-lb-details-image {
   float: unset;
-  width: unset;
   padding: unset;
   margin: unset;
   border: unset;
   max-height: unset;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: center center;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content-label::before {
@@ -4063,8 +4074,17 @@
   background-size: 100%;
 }
 
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard {
+  padding: 82px 0 22px 0;
+}
+
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body {
   height: calc(100% - 110px);
+  scrollbar-width: none;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body::-webkit-scrollbar {
+  width: 0;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body .cl-lb-row:last-child {
@@ -4084,12 +4104,29 @@
   height: calc(100% - 70px);
 }
 
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-body-res {
+  padding: 0 10px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-missing-member {
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard .cl-lb-member-row {
+  box-shadow: -4px 2px 4px 2px rgba(0, 0, 0, 0.25), 640px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description :last-child {
+  margin-bottom: 50px;
+}
+
 /**
  * Competition list
  */
 .cl-main-widget-tournaments-list {
-  height: calc(100% - 50px);
-  top: 30px;
+  height: calc(100% - 60px);
+  top: 40px;
 }
 
 /**
@@ -4128,6 +4165,8 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-header .cl-main-widget-ach-header-close {
   background-size: 100%;
   right: -15px;
+  width: 40px;
+  height: 40px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-ach-details-container .cl-main-widget-ach-details-header-label {
@@ -4147,10 +4186,18 @@
   background-size: 100%;
   right: -15px;
   border-bottom: unset;
+  width: 40px;
+  height: 40px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-reward-list {
   overflow: hidden;
+  padding-top: 40px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-reward-details-container {
+  top: 40px;
+  height: calc(100% - 62px);
 }
 
 .cl-main-widget-wrapper .cl-main-widget-reward-details-container .cl-main-widget-reward-details-header-label {
@@ -4174,16 +4221,62 @@
   background-size: 100%;
   right: -15px;
   border-bottom: unset;
+  width: 40px;
+  height: 40px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-list {
   overflow: hidden;
+  padding-top: 40px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-inbox-details-container {
+  top: 40px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-inbox-details-container .cl-main-widget-inbox-details-header-label {
   font-weight: 600;
 }
 
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-list {
+  padding-top: 40px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-ach-details-container {
+  top: 40px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-list-body {
+  height: 568px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-header-top-res {
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-leaderboard-header {
+  padding: 0 10px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-lb-rank-1 .cl-rank-col-value,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-lb-rank-2 .cl-rank-col-value,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-lb-rank-3 .cl-rank-col-value {
+  height: 23px;
+  width: 23px;
+  line-height: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .cl-main-widget-wrapper .cl-main-widget-section-container .cl-rank-col,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-icon-col {
+    width: 5%;
+  }
+
+  .cl-main-widget-wrapper .cl-main-widget-section-container .cl-name-col {
+    width: 38%;
+  }
+}
 /****************************************************************
 	 ******* Embedded description styling and layout changes ********
 	 ****************************************************************/
@@ -4218,10 +4311,21 @@
   padding-top: 72px;
 }
 
-.cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-section-image-banner-active .cl-main-widget-lb-details-description-container {
-  height: calc(100% - 265px);
-}
+@media screen and (max-width: 600px) {
+  .cl-main-widget-wrapper .cl-main-section-image-banner-active .cl-main-widget-lb-details-image-container {
+    max-height: 110px;
+  }
 
+  .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-section-image-banner-active .cl-main-widget-lb-leaderboard {
+    top: 130px;
+    height: calc(100% - 130px);
+  }
+}
+@media screen and (min-width: 601px) {
+  .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-section-image-banner-active .cl-main-widget-lb-details-description-container {
+    height: calc(100% - 265px);
+  }
+}
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-container {
   display: block;
   position: relative;
@@ -4256,10 +4360,10 @@
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description-close {
   float: left;
   width: 100%;
-  height: 25px;
-  background: var(--primary-color-darken);
+  height: 50px;
+  background: var(--primary-background-color);
   position: absolute;
-  bottom: 8px;
+  bottom: 0;
   left: 0;
   cursor: pointer;
 }
@@ -4269,7 +4373,7 @@
   display: block;
   position: absolute;
   left: 50%;
-  top: calc(50% - 2px);
+  top: 13px;
   width: 12px;
   height: 12px;
   border: 2px solid var(--primary-font-color);
@@ -4288,10 +4392,58 @@
 
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-missing-member {
   display: block !important;
+  width: calc(100% - 20px);
+  position: relative;
+  left: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  bottom: 43px;
 }
 
 .cl-main-widget-wrapper .cl-main-widget-section-container.cl-main-active-embedded-description .cl-main-widget-lb-details-description *:last-child {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
+  display: none;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-tournaments-list .cl-tour-list-details-cont .cl-tour-list-details-wrap {
+  padding-left: 45px;
+  position: relative;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-tournaments-list .cl-tour-list-details-cont .cl-tour-list-details-wrap::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 40px;
+  background: var(--lb3-tournament-list-bg-icon) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* Tab heights */
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-label,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-header .cl-main-widget-ach-header-label,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-reward-header .cl-main-widget-reward-header-label,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-header .cl-main-widget-inbox-header-label {
+  line-height: 40px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-ach-header,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-reward-header,
+.cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-inbox-header {
+  height: 40px;
+}
+
+.cl-main-widget-wrapper .cl-main-widget-lb-details-container {
+  height: calc(100% - 62px);
+  top: 40px;
 }
 
 /********************************************************************
@@ -4350,20 +4502,20 @@
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
     width: 30px;
-    height: 30px;
+    height: 40px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header {
-    height: 32px;
+    height: 42px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
-    line-height: 32px;
+    line-height: 42px;
     font-size: 14px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-label {
-    line-height: 32px;
+    line-height: 42px;
     font-size: 16px;
     display: none;
   }
@@ -4374,27 +4526,27 @@
 
   .cl-main-widget-wrapper .cl-main-widget-lb-details-container {
     height: calc(100% - 64px);
-    top: 32px;
+    top: 42px;
   }
 }
 @media (max-height: 520px) and (max-width: 812px) {
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header {
-    height: 30px;
+    height: 40px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-list-icon {
     width: 30px;
-    height: 30px;
+    height: 40px;
     margin: 3px 0 0 10px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-header .cl-main-widget-lb-header-date {
-    line-height: 30px;
+    line-height: 40px;
     font-size: 13px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details {
-    height: 30px;
+    height: 40px;
   }
 
   .cl-main-widget-wrapper .cl-main-widget-section-container .cl-main-widget-lb-details-content {
