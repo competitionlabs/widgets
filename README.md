@@ -2,6 +2,9 @@
     <img width="600" src="https://www.competitionlabs.com/wp-content/uploads/2020/01/Logo-v4.svg"><br/>
 </p>
 
+# Deprecated
+[Please use the new version](https://github.com/competitionlabs/gamification-ux-package)
+
 # Widgets
 
 HTML/CSS and Vanilla JavaScript Competition Labs widgets
